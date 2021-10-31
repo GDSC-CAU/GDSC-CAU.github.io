@@ -8,7 +8,7 @@ category: 데이터
 categoryeng: data-science
 author: 신윤진
 language: English
-featured: none
+featured: Featured
 ---
 
 

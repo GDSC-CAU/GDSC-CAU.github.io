@@ -1,8 +1,10 @@
 <template>
   <div class="absol">
-    <Header class="fixed" />
-    <Nuxt />
-    <Footer />
+    <!-- <Header /> -->
+    <Head class="fixed" />
+    <Nuxt class="bg-gray-50"/>
+    <!-- <Footer /> -->
+    <Foot />
   </div>
 </template>
 

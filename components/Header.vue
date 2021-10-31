@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full px-4 border-b md:border-b border-gray-200 bg-white z-30">
+    <div class="max-w-6xl px-4 border-b md:border-b border-gray-200 bg-white z-30">
         <div class="px-4 flex items-center justify-between">
 
             <div class="ml-1.5 md:ml-0 flex w-full">

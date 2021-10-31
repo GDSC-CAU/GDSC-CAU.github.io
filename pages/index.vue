@@ -1,7 +1,10 @@
 <template>
-  <div class="max-w-7xl mx-auto">
+<div class="w-full bg-gray-50">
+  <div class="pt-16">
 
-    <div class="pt-44 pb-10">
+<!-- 메인 문구 -->
+
+    <div class="pt-36 pb-10 max-w-6xl mx-auto px-5">
       <div class="pb-6 poppins text-7xl font-medium text-gray-800">
         Study N' Share
       </div>
@@ -10,41 +13,42 @@
       </div>
     </div>
 
-    <div class="pt-16 flex justify-between items-center">
+<!-- 추천 아티클 (후에 carousel화?) -->
+
+    <div class="pt-16 flex justify-between items-center max-w-6xl mx-auto px-5">
         <div class="text-4xl text-gray-800 font-medium poppins">Featured Articles</div>
-        <div class="text-base text-blue-500 poppins">See All Featured Articles</div>
+        <nuxt-link to="featured">
+          <div class="text-base text-blue-500 poppins">See All Featured Articles</div>
+        </nuxt-link>
     </div>
 
-    <div class="pt-8 grid grid-cols-3 h-96">
-      <div class="rounded-xl bg-yellow-400">
-        <div class="h-3/5">
-
-        </div>
-        <div class="bg-white bg-opacity-75 h-2/5 p-5">
-          지식
-        </div>
-      </div>
-      <div class="ml-5 rounded-xl bg-green-500">
-        <div class="h-3/5">
-
-        </div>
-        <div class="bg-white bg-opacity-75 h-2/5 p-5">
-          실수
-        </div>
-      </div>
-      <div class="ml-5 rounded-xl bg-blue-500">
-        <div class="h-3/5">
-
-        </div>
-        <div class="bg-white bg-opacity-75 h-2/5 p-5">
-          꼼수
-        </div>
+    <div class="max-w-6xl mx-auto px-5 grid grid-cols-3 gap-x-5 pt-8">
+      <div v-for="ftarticle of featured" :key="ftarticle" class="nthz">
+        <nuxt-link :to="{ name: 'slug', params: { slug: ftarticle.slug } }">
+          <div class="h-96 custom-radius">
+            <div class="h-3/5 flex items-center">
+              <!-- <img class="h-24" :src="require(`~/assets/resources/${ftarticle.img}`)"> -->
+            </div>
+            <div class="bg-white bg-opacity-75 h-2/5 p-5">
+              <p class="mb-1 md:mb-1 text-sm md:text-sm text-gray-500">{{ftarticle.category}}</p>
+              <h3 class="text-gray-800 poppins text-xl font-medium keepall mb-1">{{ ftarticle.title }}</h3>
+              <p class="text-sm md:text-sm text-gray-500">{{ ftarticle.datetime }}</p>
+            </div>
+          </div>
+        </nuxt-link>
       </div>
     </div>
 
-    <div class="mt-24 mb-10 text-4xl text-gray-800 font-medium poppins">Latest Articles</div>
+<!-- 최신 아티클 -->
 
-    <div class="max-w-7xl grid grid-cols-1 colspan mt-5 md:mt-8 mb-8 md:mb-12">
+    <div class="mt-24 mb-10 flex justify-between items-center max-w-6xl mx-auto px-5">
+        <div class="text-4xl text-gray-800 font-medium poppins">Latest Articles</div>
+        <nuxt-link to="all-articles">
+          <div class="text-base text-blue-500 poppins">See All Articles</div>
+        </nuxt-link>
+    </div>
+
+    <div class="max-w-6xl grid grid-cols-1 colspan mt-5 md:mt-8 max-w-6xl mx-auto px-5">
         <div class="group" v-for="article of articles" :key="article">
             <nuxt-link :to="{ name: 'slug', params: { slug: article.slug } }">
                 <div class="article-inner flex justify-between items-center border-t py-8 border-gray-600">
@@ -53,7 +57,7 @@
                       <h2 class="mb-1 md:mb-1.5 text-lg md:text-xl font-semibold poppins text-gray-800">{{ article.title }}</h2>
                       <p class=" text-sm md:text-base text-gray-600 custom-text">{{article.description}}</p>
                   </div>
-                  <div class="pr-6">
+                  <div class="pl-4 pr-6">
                     <ExternalLinkLogo />
                   </div>
                 </div>
@@ -61,7 +65,83 @@
         </div>
     </div>
 
+<!-- 카테고리 -->
+
+    <div class="mt-20 pb-10 flex justify-between items-center max-w-6xl mx-auto px-5">
+        <div class="text-4xl text-gray-800 font-medium poppins">Categories</div>
+    </div>
+
+    <div class="max-w-6xl flex grid grid-cols-3 mx-auto px-5 gap-x-3 gap-y-3 pb-32">
+      <div class="border border-gray-600 h-44 rounded-lg bg-white">
+        <div class="h-2/5 border-b border-gray-600 flex items-center">
+          <div class="text-2xl text-gray-800 poppins px-6">Front-End</div>
+        </div>
+        <div class="h-3/5 flex items-center">
+          <div class="px-6">
+            <div class="text-gray-600 mb-3 ftmore">웹 개발을 위한 글들이에요.</div>
+            <div class="text-blue-500 text-sm poppins">See More</div>
+          </div>
+        </div>
+      </div>
+      <div class="border border-gray-600 h-44 rounded-lg bg-white">
+        <div class="h-2/5 border-b border-gray-600 flex items-center">
+          <div class="text-2xl text-gray-800 poppins px-6">Back-End</div>
+        </div>
+        <div class="h-3/5 flex items-center">
+          <div class="px-6">
+            <div class="text-gray-600 mb-3 ftmore">서버와 데이터베이스에 관한 글들이에요.</div>
+            <div class="text-blue-500 text-sm poppins">See More</div>
+          </div>
+        </div>
+      </div>
+      <div class="border border-gray-600 h-44 rounded-lg bg-white">
+        <div class="h-2/5 border-b border-gray-600 flex items-center">
+          <div class="text-2xl text-gray-800 poppins px-6">Data Science</div>
+        </div>
+        <div class="h-3/5 flex items-center">
+          <div class="px-6">
+            <div class="text-gray-600 mb-3 ftmore">DS부터 ML, DL까지 데이터에 관한 글들이에요.</div>
+            <div class="text-blue-500 text-sm poppins">See More</div>
+          </div>
+        </div>
+      </div>
+      <div class="border border-gray-600 h-44 rounded-lg bg-white">
+        <div class="h-2/5 border-b border-gray-600 flex items-center">
+          <div class="text-2xl text-gray-800 poppins px-6">Application</div>
+        </div>
+        <div class="h-3/5 flex items-center">
+          <div class="px-6">
+            <div class="text-gray-600 mb-3 ftmore">모바일 어플리케이션 개발에 관한 글들이에요.</div>
+            <div class="text-blue-500 text-sm poppins">See More</div>
+          </div>
+        </div>
+      </div>
+      <div class="border border-gray-600 h-44 rounded-lg bg-white">
+        <div class="h-2/5 border-b border-gray-600 flex items-center">
+          <div class="text-2xl text-gray-800 poppins px-6">DevOps</div>
+        </div>
+        <div class="h-3/5 flex items-center">
+          <div class="px-6">
+            <div class="text-gray-600 mb-3 ftmore">개발부터 배포까지의 프로세스 개선을 위한 글들이에요.</div>
+            <div class="text-blue-500 text-sm poppins">See More</div>
+          </div>
+        </div>
+      </div>
+      <div class="border border-gray-600 h-44 rounded-lg bg-white">
+        <div class="h-2/5 border-b border-gray-600 flex items-center">
+          <div class="text-2xl text-gray-800 poppins px-6">General</div>
+        </div>
+        <div class="h-3/5 flex items-center">
+          <div class="px-6">
+            <div class="text-gray-600 mb-3 ftmore">카테고리화하기 애매한 개발 관련 글들이에요.</div>
+            <div class="text-blue-500 text-sm poppins">See More</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
+</div>
 </template>
 
 <script>
@@ -71,19 +151,42 @@ export default {
       .only(['title', 'description', 'img', 'datetime', 'category', 'author', 'slug'])
       // .sortBy('createdAt', 'asc')
       .sortBy('datetime', 'desc')
+      .limit(5)
+      .fetch();
+    const featured = await $content('blog', params.slug)
+      .where({featured: 'Featured'})
+      .only(['title', 'description', 'img', 'datetime', 'category', 'author', 'slug'])
+      .sortBy('datetime', 'desc')
+      .limit(3)
       .fetch();
     return {
-      articles
+      articles,
+      featured
     }
   }
 }
 </script>
 
 <style scoped>
-/* .colspan:nth-child(odd){
-  grid-column: 1/3;
+.nthz:nth-child(1){
+  background-color: #FBBF25;
+  border-radius: 0.6rem;
 }
-.colspan:nth-child(even){
-  grid-column: 2/3;
-} */
+.nthz:nth-child(2){
+  background-color: #11BA81;
+  border-radius: 0.6rem;
+}
+.nthz:nth-child(3){
+  background-color: #3C82F6;
+  border-radius: 0.6rem;
+}
+.keepall{
+    word-break: keep-all;
+}
+.bw{
+  border: solid 1.8px #1f2937 ;
+}
+.ftmore{
+  font-size: 0.92rem;
+}
 </style>

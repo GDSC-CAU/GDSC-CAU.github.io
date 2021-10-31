@@ -1,6 +1,6 @@
 <template>
-    <footer class="w-full bg-gray-100 pt-11 pb-14 md:pt-14 md:pb-20 px-2 md:px-5">
-        <div class="max-w-7xl mx-auto px-5">
+    <footer class="w-full bg-gray-50">
+        <div class="max-w-6xl mx-auto pt-11 pb-14 md:pt-16 md:pb-20 px-2 md:px-5 border-t border-gray-300">
             <div class="block md:flex relative">
 
                 <div class="justify-around md:justify-start px-8 md:px-0 items-start flex">
