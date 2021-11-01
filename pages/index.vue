@@ -26,10 +26,12 @@
       <div v-for="ftarticle of featured" :key="ftarticle" class="nthz">
         <nuxt-link :to="{ name: 'slug', params: { slug: ftarticle.slug } }">
           <div class="h-96 custom-radius">
-            <div class="h-3/5 flex items-center">
-              <!-- <img class="h-24" :src="require(`~/assets/resources/${ftarticle.img}`)"> -->
+            <div class="h-3/5 flex items-center justify-center">
+              <div class="featbox">
+                <img class="featimg" :src="require(`~/assets/resources/${ftarticle.img}`)" alt="">
+              </div>
             </div>
-            <div class="bg-white bg-opacity-75 h-2/5 p-5">
+            <div class="bg-white bg-opacity-75 h-2/5 p-5 z-30">
               <p class="mb-1 md:mb-1 text-sm md:text-sm text-gray-500">{{ftarticle.category}}</p>
               <h3 class="text-gray-800 poppins text-xl font-medium keepall mb-1">{{ ftarticle.title }}</h3>
               <p class="text-sm md:text-sm text-gray-500">{{ ftarticle.datetime }}</p>
@@ -71,74 +73,7 @@
         <div class="text-4xl text-gray-800 font-medium poppins">Categories</div>
     </div>
 
-    <div class="max-w-6xl flex grid grid-cols-3 mx-auto px-5 gap-x-3 gap-y-3 pb-32">
-      <div class="border border-gray-600 h-44 rounded-lg bg-white">
-        <div class="h-2/5 border-b border-gray-600 flex items-center">
-          <div class="text-2xl text-gray-800 poppins px-6">Front-End</div>
-        </div>
-        <div class="h-3/5 flex items-center">
-          <div class="px-6">
-            <div class="text-gray-600 mb-3 ftmore">웹 개발을 위한 글들이에요.</div>
-            <div class="text-blue-500 text-sm poppins">See More</div>
-          </div>
-        </div>
-      </div>
-      <div class="border border-gray-600 h-44 rounded-lg bg-white">
-        <div class="h-2/5 border-b border-gray-600 flex items-center">
-          <div class="text-2xl text-gray-800 poppins px-6">Back-End</div>
-        </div>
-        <div class="h-3/5 flex items-center">
-          <div class="px-6">
-            <div class="text-gray-600 mb-3 ftmore">서버와 데이터베이스에 관한 글들이에요.</div>
-            <div class="text-blue-500 text-sm poppins">See More</div>
-          </div>
-        </div>
-      </div>
-      <div class="border border-gray-600 h-44 rounded-lg bg-white">
-        <div class="h-2/5 border-b border-gray-600 flex items-center">
-          <div class="text-2xl text-gray-800 poppins px-6">Data Science</div>
-        </div>
-        <div class="h-3/5 flex items-center">
-          <div class="px-6">
-            <div class="text-gray-600 mb-3 ftmore">DS부터 ML, DL까지 데이터에 관한 글들이에요.</div>
-            <div class="text-blue-500 text-sm poppins">See More</div>
-          </div>
-        </div>
-      </div>
-      <div class="border border-gray-600 h-44 rounded-lg bg-white">
-        <div class="h-2/5 border-b border-gray-600 flex items-center">
-          <div class="text-2xl text-gray-800 poppins px-6">Application</div>
-        </div>
-        <div class="h-3/5 flex items-center">
-          <div class="px-6">
-            <div class="text-gray-600 mb-3 ftmore">모바일 어플리케이션 개발에 관한 글들이에요.</div>
-            <div class="text-blue-500 text-sm poppins">See More</div>
-          </div>
-        </div>
-      </div>
-      <div class="border border-gray-600 h-44 rounded-lg bg-white">
-        <div class="h-2/5 border-b border-gray-600 flex items-center">
-          <div class="text-2xl text-gray-800 poppins px-6">DevOps</div>
-        </div>
-        <div class="h-3/5 flex items-center">
-          <div class="px-6">
-            <div class="text-gray-600 mb-3 ftmore">개발부터 배포까지의 프로세스 개선을 위한 글들이에요.</div>
-            <div class="text-blue-500 text-sm poppins">See More</div>
-          </div>
-        </div>
-      </div>
-      <div class="border border-gray-600 h-44 rounded-lg bg-white">
-        <div class="h-2/5 border-b border-gray-600 flex items-center">
-          <div class="text-2xl text-gray-800 poppins px-6">General</div>
-        </div>
-        <div class="h-3/5 flex items-center">
-          <div class="px-6">
-            <div class="text-gray-600 mb-3 ftmore">카테고리화하기 애매한 개발 관련 글들이에요.</div>
-            <div class="text-blue-500 text-sm poppins">See More</div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Category />
 
   </div>
 </div>
@@ -186,7 +121,15 @@ export default {
 .bw{
   border: solid 1.8px #1f2937 ;
 }
-.ftmore{
-  font-size: 0.92rem;
+.featbox {
+    width: 160px;
+    height: 160px; 
+    border-radius: 5%;
+    overflow: hidden;
+}
+.featimg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 </style>

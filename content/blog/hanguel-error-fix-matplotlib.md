@@ -7,7 +7,7 @@ img: hanguel-error-fix-matplotlib.png
 datetime: 2021. 07. 08.
 category: 웹_개발
 categoryeng: front-end
-author: 신윤진
+author: Taylor Mason
 language: English
 featured: none
 

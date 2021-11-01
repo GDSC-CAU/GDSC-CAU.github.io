@@ -2,11 +2,11 @@
 title: Folium choropleth에서 colorbar 인덱스 바꾸는 법
 description: Folium choropleth에서 colorbar의 인덱스(숫자)를 바꾸는 법을 알아보자.
 slug: changing-colorbar-index-of-folium-choropleth
-img: not-yet-generated.png
+img: hongkyung.jpg
 datetime: 2021. 08. 31.
-category: 데이터
+category: general
 categoryeng: data-science
-author: 신윤진
+author: Bobby Axelord
 language: English
 featured: Featured
 ---

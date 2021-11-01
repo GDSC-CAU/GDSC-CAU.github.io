@@ -1,13 +1,29 @@
 <template>
 <div class="w-full bg-gray-50">
-    <div class="related max-w-5xl mx-auto py-10 md:pb-24 md:pt-40">
 
-        <div class="max-w-3xl mx-auto">
-            <p class="custom-text leading-snug md:leading-normal px-5 md:px-0 mb-2 text-2xl md:text-5xl text-center text-gray-800 title font-semibold">{{member.description}}</p>
-            <p class="text-base md:text-xl text-gray-500 text-center mb-16">{{member.name}} · {{member.techstack}}</p>
+    <div class="pt-52 pb-14 max-w-6xl mx-auto px-5">
+        <div class="pb-6 poppins text-7xl font-medium text-gray-800">
+            {{member.name}}
         </div>
-
     </div>
+
+
+        <!-- <div class="max-w-6xl mx-auto px-5 grid grid-cols-5 gap-x-5 gap-y-9 pb-24">
+            <div v-for="imember of member" :key="imember">
+                <nuxt-link :to="{name: 'id', params: {id: imember.slug} }">
+                    <div class="flex justify-center mb-5">
+                        <div class="box">
+                            <img class="profile" :src="require(`~/assets/resources/profile/${imember.img}`)" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-xl flex justify-center poppins text-gray-800">{{imember.name}}</div>
+                        <div class="text flex justify-center poppins text-gray-800">{{imember.role}}</div>
+                    </div>
+                </nuxt-link>
+            </div>
+        </div> -->
+
 
     <div class="max-w-6xl grid grid-cols-1 colspan mt-5 md:mt-8 pb-16 max-w-6xl mx-auto px-5">
         <div class="group" v-for="marticle of memberArticles" :key="marticle">

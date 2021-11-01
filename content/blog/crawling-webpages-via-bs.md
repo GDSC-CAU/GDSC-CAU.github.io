@@ -5,9 +5,9 @@ description: BeautifulSoup을 통해 여러 페이지를 크롤링 할 시 에�
 slug: crawling-webpages-via-bs
 img: crawling-webpages-via-bs.png
 datetime: 2021. 07. 20.
-category: 데이터
+category: Front-End
 categoryeng: data-science
-author: 신윤진
+author: Lauren Turner
 language: Korean
 featured: none
 

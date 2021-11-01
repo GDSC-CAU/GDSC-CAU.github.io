@@ -6,7 +6,7 @@ img: coco-2021-invitation.png
 datetime: 2021. 08. 23.
 category: 프로젝트
 categoryeng: projects
-author: Staff
+author: Kate Sacker
 language: Korean
 featured: none
 ---

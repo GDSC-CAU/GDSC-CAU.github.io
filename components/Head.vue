@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full border-b md:border-b border-gray-200 bg-white z-40">
+    <div class="w-full border-b md:border-b border-gray-300 bg-white z-40">
         <div class="max-w-7xl mx-auto flex items-center justify-between px-4">
 
             <div class="ml-1.5 md:ml-0 flex w-full py-5">
@@ -10,14 +10,19 @@
                         </nuxt-link>
                     </li>
                     <li class="text-gray-500 pl-3 hover:text-gray-800 transition hover:duration-300 font-light">
-                        <a href="" class="poppins">About</a>
-                        <!-- <nuxt-link to="korean" class="text-gray-700 text-sm">한글</nuxt-link> -->
+                        <nuxt-link to="about" class="poppins">About</nuxt-link>
+                    </li>
+                    <li class="poppins text-gray-500 hover:text-gray-800 transition hover:duration-300 font-light">
+                        <nuxt-link to="all-articles" class="poppins">Articles</nuxt-link>
+                    </li>
+                    <li class="poppins text-gray-500 hover:text-gray-800 transition hover:duration-300 font-light">
+                        <nuxt-link to="categories" class="poppins">Categories</nuxt-link>
                     </li>
                     <li class="poppins text-gray-500 hover:text-gray-800 transition hover:duration-300 font-light">
                         <nuxt-link to="members" class="poppins">Members</nuxt-link>
                     </li>
                     <li class="poppins text-gray-500 hover:text-gray-800 transition hover:duration-300 font-light">
-                        <a href="" class="poppins">Projects</a>
+                        <nuxt-link to="projects" class="poppins">Projects</nuxt-link>
                     </li>
                 </ul>
             </div>

@@ -4,7 +4,9 @@
 
         <div class="max-w-3xl mx-auto">
             <p class="custom-text leading-snug md:leading-normal px-5 md:px-0 mb-2 text-2xl md:text-5xl text-center text-gray-800 title font-semibold">{{article.title}}</p>
-            <p class="text-base md:text-xl text-gray-500 text-center mb-16">{{article.category}} · {{article.datetime}} · by {{article.author}}</p>
+            <p class="text-base md:text-xl text-gray-500 text-center mb-16">
+                <nuxt-link :to='`${article.category}`'>{{article.category}}</nuxt-link> · {{article.datetime}} · by {{article.author}}
+            </p>
         </div>
 
         <nuxt-content :document="article" class="prose max-w-5xl custom-text px-6"/>
@@ -25,7 +27,7 @@ export default {
         .only(['title', 'slug'])
         .sortBy('datetime', 'desc')
         .surround(params.slug)
-        .fetch()
+        .fetch();
 
         return { article, prev, next }
     }

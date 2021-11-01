@@ -7,7 +7,7 @@ img: selenium-for-colab.png
 datetime: 2021. 07. 09.
 category: 프로젝트
 categoryeng: projects
-author: 신윤진
+author: Peniel Cho
 language: Korean
 featured: none
 

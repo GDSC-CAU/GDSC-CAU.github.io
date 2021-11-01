@@ -6,7 +6,7 @@ img: ipython-github-error.png
 datetime: 2021. 07. 12.
 category: 웹_개발
 categoryeng: front-end
-author: 조용주
+author: Peniel Cho
 language: Korean
 featured: none
 ---
