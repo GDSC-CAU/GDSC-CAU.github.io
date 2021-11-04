@@ -5,10 +5,9 @@ description: Colab에서 Selenium을 사용하기 위해서는 몇가지의 코�
 slug: selenium-for-colab
 img: selenium-for-colab.png
 datetime: 2021. 07. 09.
-category: 프로젝트
+category: General
 categoryeng: projects
 author: Peniel Cho
-language: Korean
 featured: none
 
 ---

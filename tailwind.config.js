@@ -7,16 +7,19 @@ module.exports = {
         DEFAULT: {
           css: {
             h1: {
-              color: '#374151',
+              fontWeight: '600',
             },
             h2: {
-              color: '#374151',
+              fontWeight: '600',
             },
             h3: {
-              color: '#374151',
+              fontWeight: '600',
             },
             h4: {
-              color: '#374151',
+              fontWeight: '600',
+            },
+            h5: {
+              fontWeight: '600',
             },
           }
         }

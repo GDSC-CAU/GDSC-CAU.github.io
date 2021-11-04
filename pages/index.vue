@@ -18,7 +18,7 @@
     <div class="pt-16 flex justify-between items-center max-w-6xl mx-auto px-5">
         <div class="text-4xl text-gray-800 font-medium poppins">Featured Articles</div>
         <nuxt-link to="featured">
-          <div class="text-base text-blue-500 poppins">See All Featured Articles</div>
+          <div class="text-base text-blue-500 poppins hover:underline">See All Featured Articles</div>
         </nuxt-link>
     </div>
 
@@ -28,13 +28,13 @@
           <div class="h-96 custom-radius">
             <div class="h-3/5 flex items-center justify-center">
               <div class="featbox">
-                <img class="featimg" :src="require(`~/assets/resources/${ftarticle.img}`)" alt="">
+                <img class="featimg" :src="require(`~/assets/resources/thumbnails/${ftarticle.img}`)" alt="">
               </div>
             </div>
             <div class="bg-white bg-opacity-75 h-2/5 p-5 z-30">
               <p class="mb-1 md:mb-1 text-sm md:text-sm text-gray-500">{{ftarticle.category}}</p>
-              <h3 class="text-gray-800 poppins text-xl font-medium keepall mb-1">{{ ftarticle.title }}</h3>
-              <p class="text-sm md:text-sm text-gray-500">{{ ftarticle.datetime }}</p>
+              <h3 class="text-gray-800 poppins text-lg font-medium keepall mb-1">{{ ftarticle.title }}</h3>
+              <p class="text-sm md:text-sm text-gray-500">{{ftarticle.author}}</p>
             </div>
           </div>
         </nuxt-link>
@@ -46,7 +46,7 @@
     <div class="mt-24 mb-10 flex justify-between items-center max-w-6xl mx-auto px-5">
         <div class="text-4xl text-gray-800 font-medium poppins">Latest Articles</div>
         <nuxt-link to="all-articles">
-          <div class="text-base text-blue-500 poppins">See All Articles</div>
+          <div class="text-base text-blue-500 poppins hover:underline">See All Articles</div>
         </nuxt-link>
     </div>
 
@@ -55,8 +55,8 @@
             <nuxt-link :to="{ name: 'slug', params: { slug: article.slug } }">
                 <div class="article-inner flex justify-between items-center border-t py-8 border-gray-600">
                   <div class="pr-4">
-                      <p class="mb-1 md:mb-1.5 text-sm md:text-sm text-gray-400">{{article.category}} · {{article.author}} · {{ article.datetime }}</p>
-                      <h2 class="mb-1 md:mb-1.5 text-lg md:text-xl font-semibold poppins text-gray-800">{{ article.title }}</h2>
+                      <p class="mb-1 md:mb-1.5 text-sm md:text-sm text-gray-400">{{article.category}} · {{article.author}}</p>
+                      <h2 class="mb-1 md:mb-1.5 text-lg md:text-xl font-medium poppins text-gray-800">{{ article.title }}</h2>
                       <p class=" text-sm md:text-base text-gray-600 custom-text">{{article.description}}</p>
                   </div>
                   <div class="pl-4 pr-6">
@@ -84,21 +84,26 @@ export default {
   async asyncData({ $content, params }) {
     const articles = await $content('blog', params.slug)
       .only(['title', 'description', 'img', 'datetime', 'category', 'author', 'slug'])
-      // .sortBy('createdAt', 'asc')
-      .sortBy('datetime', 'desc')
+      .sortBy('createdAt', 'desc')
       .limit(5)
       .fetch();
     const featured = await $content('blog', params.slug)
       .where({featured: 'Featured'})
       .only(['title', 'description', 'img', 'datetime', 'category', 'author', 'slug'])
-      .sortBy('datetime', 'desc')
+      .sortBy('createdAt', 'desc')
       .limit(3)
       .fetch();
     return {
       articles,
       featured
     }
-  }
+  },
+    methods: {
+        formatDate(date) {
+        const options = { year: 'numeric', month: 'long', day: 'numeric' }
+        return new Date(date).toLocaleDateString('en', options)
+        }
+    }
 }
 </script>
 
@@ -122,7 +127,7 @@ export default {
   border: solid 1.8px #1f2937 ;
 }
 .featbox {
-    width: 160px;
+    width: 230px;
     height: 160px; 
     border-radius: 5%;
     overflow: hidden;

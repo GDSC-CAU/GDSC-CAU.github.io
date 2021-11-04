@@ -8,7 +8,6 @@ datetime: 2021. 07. 20.
 category: Front-End
 categoryeng: data-science
 author: Lauren Turner
-language: Korean
 featured: none
 
 ---

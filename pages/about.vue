@@ -18,7 +18,7 @@
                     <p class="text-xl poppins text-gray-800">Active Members</p>
                 </div>
                 <nuxt-link class="absolute bottom-0 left-0 pb-8 pl-8" to="members">
-                    <div class=" poppins text-lg text-gray-800 underline">
+                    <div class="poppins text-lg text-gray-800 underline">
                         See Members
                     </div>
                 </nuxt-link>

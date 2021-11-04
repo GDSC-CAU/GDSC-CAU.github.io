@@ -15,7 +15,7 @@
                 <nuxt-link :to="{ name: 'slug', params: { slug: article.slug } }">
                     <div class="article-inner flex justify-between items-center border-t py-8 border-gray-600">
                     <div class="pr-4">
-                        <p class="mb-1 md:mb-1.5 text-sm md:text-sm text-gray-400">{{article.category}} · {{article.author}} · {{ article.datetime }}</p>
+                        <p class="mb-1 md:mb-1.5 text-sm md:text-sm text-gray-400">{{article.category}} · {{article.author}}</p>
                         <h2 class="mb-1 md:mb-1.5 text-lg md:text-xl font-semibold poppins text-gray-800">{{ article.title }}</h2>
                         <p class=" text-sm md:text-base text-gray-600 custom-text">{{article.description}}</p>
                     </div>
@@ -35,9 +35,9 @@
 export default {
   async asyncData({ $content, params }) {
     const articles = await $content('blog', params.slug)
-      .where({category: 'data-science'})
+      .where({category: 'Data-Science'})
       .only(['title', 'description', 'img', 'datetime', 'category', 'author', 'slug'])
-      .sortBy('datetime', 'desc')
+      .sortBy('createdAt', 'desc')
       .fetch();
     return {
       articles

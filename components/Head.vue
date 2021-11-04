@@ -9,19 +9,19 @@
                             <HeaderLogo />
                         </nuxt-link>
                     </li>
-                    <li class="text-gray-500 pl-3 hover:text-gray-800 transition hover:duration-300 font-light">
+                    <li class="hidden md:block text-gray-500 pl-3 hover:text-gray-800 transition hover:duration-300 font-light">
                         <nuxt-link to="about" class="poppins">About</nuxt-link>
                     </li>
-                    <li class="poppins text-gray-500 hover:text-gray-800 transition hover:duration-300 font-light">
+                    <li class="hidden md:block poppins text-gray-500 hover:text-gray-800 transition hover:duration-300 font-light">
                         <nuxt-link to="all-articles" class="poppins">Articles</nuxt-link>
                     </li>
-                    <li class="poppins text-gray-500 hover:text-gray-800 transition hover:duration-300 font-light">
+                    <li class="hidden md:block poppins text-gray-500 hover:text-gray-800 transition hover:duration-300 font-light">
                         <nuxt-link to="categories" class="poppins">Categories</nuxt-link>
                     </li>
-                    <li class="poppins text-gray-500 hover:text-gray-800 transition hover:duration-300 font-light">
+                    <li class="hidden md:block poppins text-gray-500 hover:text-gray-800 transition hover:duration-300 font-light">
                         <nuxt-link to="members" class="poppins">Members</nuxt-link>
                     </li>
-                    <li class="poppins text-gray-500 hover:text-gray-800 transition hover:duration-300 font-light">
+                    <li class="hidden md:block poppins text-gray-500 hover:text-gray-800 transition hover:duration-300 font-light">
                         <nuxt-link to="projects" class="poppins">Projects</nuxt-link>
                     </li>
                 </ul>
@@ -29,13 +29,7 @@
 
             <div class="md:hidden flex content-center">
                 <button @click="drawer">
-                <svg 
-                    class="h-8 w-8 fill-current text-black"
-                    fill="none" stroke-linecap="round" 
-                    stroke-linejoin="round" stroke-width="2" 
-                    viewBox="0 0 24 24" stroke="currentColor">
-                    <path d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
+                <Menu />
                 </button>
             </div>
 
@@ -43,7 +37,7 @@
                 <ul class="flex space-x-2 text-base items-center">
                     <li>
                         <div class="hidden md:block group">
-                            <a href="https://github.com/Google-Developer-Student-Clubs-CAU" target="blank" class="">
+                            <a href="https://github.com/GDSC-CAU" target="blank" class="">
                                 <GithubLogo />
                             </a>
                         </div>
@@ -90,15 +84,15 @@
                 </span>
 
                 <ul class="divide-y font-sans">
-                <li><a href="#" @click="isOpen = false" class="my-4 inline-block">Home</a></li>
-                <li><a href="#" @click="isOpen = false" class="my-4 inline-block">Services</a></li>
-                <li><a href="#" @click="isOpen = false" class="my-4 inline-block">Features</a></li>
-                <li><a href="#" @click="isOpen = false" class="my-4 inline-block">FAQ</a></li>
-                <li><a href="#" @click="isOpen = false" class="my-4 inline-block">Contact</a></li>
-                <li><a href="#" @click="isOpen = false" class="my-8 w-full text-center font-semibold cta inline-block bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded text-white">Sign Up</a></li>
+                <li><a href="#" @click="isOpen = false" class="my-4 inline-block">About</a></li>
+                <li><a href="#" @click="isOpen = false" class="my-4 inline-block">Articles</a></li>
+                <li><a href="#" @click="isOpen = false" class="my-4 inline-block">Categories</a></li>
+                <li><a href="#" @click="isOpen = false" class="my-4 inline-block">Members</a></li>
+                <li><a href="#" @click="isOpen = false" class="my-4 inline-block">Projects</a></li>
+                <!-- <li><a href="#" @click="isOpen = false" class="my-8 w-full text-center font-semibold cta inline-block bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded text-white">Sign Up</a></li> -->
                 </ul>
 
-                <div class="follow">
+                <!-- <div class="follow">
                 <p class="italic font-sans text-sm">follow us:</p>
                 <div class="social flex space-x-5 mt-4 ">
                     <a href="#">
@@ -138,7 +132,7 @@
                     </svg>
                     </a>
                 </div>
-                </div>
+                </div> -->
 
             </aside>
         </div>

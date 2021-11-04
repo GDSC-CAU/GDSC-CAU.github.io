@@ -4,10 +4,9 @@ description: 콜랩, 주피터에선 잘 열리던 ipynb 파일이 깃헙에서�
 slug: github-ipynb-loading
 img: ipython-github-error.png
 datetime: 2021. 07. 12.
-category: 웹_개발
+category: Application
 categoryeng: front-end
 author: Peniel Cho
-language: Korean
 featured: none
 ---
 

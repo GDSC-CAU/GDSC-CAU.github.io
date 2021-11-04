@@ -4,10 +4,9 @@ description: 코사다마의 두번째 컨퍼런스, COCO 2021에 당신을 초�
 slug: coco-2021-invitation
 img: coco-2021-invitation.png
 datetime: 2021. 08. 23.
-category: 프로젝트
+category: DevOps
 categoryeng: projects
 author: Kate Sacker
-language: Korean
 featured: none
 ---
 

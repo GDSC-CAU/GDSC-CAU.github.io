@@ -1,14 +1,13 @@
 ---
 
-title: Colab에서 .py 파일 여는 법
+title: Colab에서 .py 파일 오픈하기
 description: 파이썬 확장자로 작성한 파이썬 모듈이 Colab에서 불러와지지 않는 상황의 해결방법에 대해 알아보자.
 slug: open-py-on-colab
-img: hongkyung.jpg
+img: python.jpg
 datetime: 2021. 07. 03.
-category: 데이터
+category: Data-Science
 categoryeng: data-science
 author: Wendy Rhoads
-language: Korean
 featured: Featured
 
 ---

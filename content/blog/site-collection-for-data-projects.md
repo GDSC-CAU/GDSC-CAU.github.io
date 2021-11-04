@@ -2,12 +2,11 @@
 title: DS 프로젝트 관련 사이트 모음
 description: DS 프로젝트 진행에 도움이 되는 사이트를 모아봤습니다.
 slug: site-collection-for-data-projects
-img: hongkyung.jpg
+img: datas.jpg
 datetime: 2021. 08. 31.
-category: 무소속
+category: Front-End
 categoryeng: uncategorized
-author: Hong kyung
-language: English
+author: Hong Kyung
 featured: Featured
 ---
 

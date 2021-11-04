@@ -6,7 +6,6 @@
             </div>
             <div class="font-normal text-xl text-gray-600">
                 Google Developer Student Clubs 중앙대학교 멤버들이 작성한 모든 아티클들을 모아봤어요. 
-                <br> 아티클이 많아 원하는 글을 찾기 힘들다면 검색 기능을 이용해주세요.
             </div>
         </div>
 
@@ -17,8 +16,8 @@
                 <nuxt-link :to="{ name: 'slug', params: { slug: article.slug } }">
                     <div class="article-inner flex justify-between items-center border-t py-8 border-gray-600">
                     <div class="pr-4">
-                        <p class="mb-1 md:mb-1.5 text-sm md:text-sm text-gray-400">{{article.category}} · {{article.author}} · {{ article.datetime }}</p>
-                        <h2 class="mb-1 md:mb-1.5 text-lg md:text-xl font-semibold poppins text-gray-800">{{ article.title }}</h2>
+                        <p class="mb-1 md:mb-1.5 text-sm md:text-sm text-gray-400">{{article.category}} · {{article.author}}</p>
+                        <h2 class="mb-1 md:mb-1.5 text-lg md:text-xl font-medium poppins text-gray-800">{{ article.title }}</h2>
                         <p class=" text-sm md:text-base text-gray-600 custom-text">{{article.description}}</p>
                     </div>
                     <div class="pl-4 pr-6">
@@ -37,8 +36,7 @@ export default {
   async asyncData({ $content, params }) {
     const articles = await $content('blog', params.slug)
       .only(['title', 'description', 'img', 'datetime', 'category', 'author', 'slug'])
-      // .sortBy('createdAt', 'asc')
-      .sortBy('datetime', 'desc')
+      .sortBy('createdAt', 'desc')
       .fetch();
     return {
       articles
