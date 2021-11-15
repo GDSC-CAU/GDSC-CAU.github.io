@@ -17,7 +17,7 @@ export default {
     },
     image: {
       type: String,
-      default: 'https://www.blog.penielcho.com/og-image.png'
+      default: 'https://gdsc-cau.github.io/opengraph_image.png'
     }
   },
 

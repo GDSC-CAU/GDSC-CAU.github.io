@@ -2,6 +2,93 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  // Global page headers: https://go.nuxtjs.dev/config-head
+  head: {
+    title: 'GDSC CAU',
+    htmlAttrs: {
+      lang: 'ko'
+    },
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: 'Tech Blog Run by GDSC CAU' },
+      { name: 'format-detection', content: 'telephone=no' },
+      // Twitter
+      // Test on: https://cards-dev.twitter.com/validator
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      },
+      { hid: 'twitter:site', name: 'twitter:site', content: '@googledevs' },
+      {
+        hid: 'twitter:url',
+        name: 'twitter:url',
+        content: 'https://gdsc-cau.github.io/'
+      },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: 'GDSC CAU'
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content:
+          'Tech Blog Run by GDSC CAU'
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: 'https://gdsc-cau.github.io/opengraph_image.png'
+      },
+
+      // Open Graph
+      // Test on: https://developers.facebook.com/tools/debug/
+      { hid: 'og:site_name', property: 'og:site_name', content: 'GDSC CAU' },
+      { hid: 'og:type', property: 'og:type', content: 'Blog' },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://gdsc-cau.github.io/'
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'GDSC CAU'
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content:
+          'Tech Blog Run by GDSC CAU'
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://gdsc-cau.github.io/opengraph_image.png'
+      },
+      {
+        hid: 'og:image:secure_url',
+        property: 'og:image:secure_url',
+        content: 'https://gdsc-cau.github.io/opengraph_image.png'
+      },
+      {
+        hid: 'og:image:alt',
+        property: 'og:image:alt',
+        content: 'Google Student Clubs Logo Image'
+      }
+    ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        hid: 'canonical',
+        rel: 'canonical',
+        href: `https://gdsc-cau.github.io`
+      }
+    ]
+  },
+
   googleAnalytics: {
     id: 'G-78SE6PS7BD'
   },

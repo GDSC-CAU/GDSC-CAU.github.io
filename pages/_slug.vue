@@ -1,6 +1,11 @@
 <template>
 <div class="w-full bg-gray-50">
     <div class="related max-w-5xl mx-auto py-10 md:pb-24 md:pt-44">
+        <SocialHead
+        :title="article.title"
+        :description="article.description"
+        :image="article.img"
+        />
 
         <div class="max-w-3xl mx-auto">
             <p class="text-base md:text-xl text-gray-400 text-center mb-2"><nuxt-link class="hover:underline" :to='`${article.category}`'>{{article.category}}</nuxt-link></p>
@@ -57,7 +62,29 @@ export default {
         const options = { year: 'numeric', month: 'long', day: 'numeric' }
         return new Date(date).toLocaleDateString('en', options)
         }
-    }
+    },
+
+    head() {
+        return {
+            title: this.article.title,
+            htmlAttrs: {
+            lang: 'ko'
+            },
+            meta: [
+            { charset: 'utf-8' },
+            { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+            { hid: 'description', name: 'description', content: 'Tech Blog Run by GDSC CAU' },
+            { name: 'format-detection', content: 'telephone=no' }
+            ],
+            link: [
+                {
+                hid: 'canonical',
+                rel: 'canonical',
+                href: `https://gdsc-cau.github.io/${this.$route.params.slug}`
+                }
+            ]
+        }
+    },
 
 }
 </script>
