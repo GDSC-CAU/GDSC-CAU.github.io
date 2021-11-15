@@ -23,6 +23,25 @@
 
 <script>
 export default {
+  head() {
+    let productionScripts = []
+    if (process.env.NODE_ENV === 'production') {
+      productionScripts = [
+        { hid: 'analytics', src: 'https://www.googletagmanager.com/gtag/js?id=G-78SE6PS7BD', defer: true },
+        { hid: 'analytics-script', innerHTML: "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-78SE6PS7BD');", type: 'text/javascript' }
+      ]
+    }
 
+    return {
+      title: "Google Analytics",
+      script: [
+
+      ].concat(productionScripts),
+      // __dangerouslyDisableSanitizers: ['script']
+      __dangerouslyDisableSanitizersByTagID: {
+        'analytics-script': ['innerHTML']
+      }
+    }
+  }
 }
 </script>
