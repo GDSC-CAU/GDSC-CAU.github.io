@@ -7,9 +7,9 @@
         </div>
     </div> -->
 
-        <div class="max-w-6xl mx-auto px-5 flex justify-center py-20 pb-6 pt-40">
+        <div class="max-w-6xl mx-auto px-5 flex justify-center py-20 pb-5 pt-40">
             <div>
-                <div class="box mb-6 mx-auto">
+                <div class="box md:sbox mb-6 mx-auto">
                     <img class="profile" :src="require(`~/assets/resources/profile/${member.img}`)" alt="">
                 </div>
                 <div class="text-gray-800 text-2xl font-medium flex justify-center poppins pb-1">{{member.name}}</div>
@@ -35,10 +35,10 @@
         </div> -->
 
     <div class="pt-10 flex justify-between items-center max-w-6xl mx-auto px-5">
-        <div class="text-4xl text-gray-800 font-medium poppins">Articles</div>
+        <div class="text-3xl text-gray-800 font-medium poppins">Articles</div>
     </div>
 
-    <div class="max-w-6xl grid grid-cols-1 colspan mt-5 md:mt-8 pb-16 max-w-6xl mx-auto px-5">
+    <div class="max-w-6xl grid grid-cols-1 colspan mt-5 md:mt-7 pb-16 max-w-6xl mx-auto px-5">
         <div class="group" v-for="marticle of memberArticles" :key="marticle">
             <nuxt-link :to="{ name: 'slug', params: { slug: marticle.slug } }">
                 <div class="article-inner flex justify-between items-center border-t py-8 border-gray-600">
@@ -76,5 +76,22 @@ export default {
 <style scpoed>
 .custom-text{
     word-break: keep-all;
+}
+.box {
+    width: 150px;
+    height: 150px; 
+    border-radius: 70%;
+    overflow: hidden;
+}
+.sbox{
+    width: 200px;
+    height: 200px; 
+    border-radius: 70%;
+    overflow: hidden;
+}
+.profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 </style>

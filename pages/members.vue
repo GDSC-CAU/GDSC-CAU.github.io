@@ -6,7 +6,7 @@
             </div>
         </div>
 
-        <div class="max-w-6xl mx-auto px-5 grid grid-cols-5 gap-x-5 gap-y-9 pb-24">
+        <div class="max-w-6xl mx-auto px-5 grid grid-cols-2 md:grid-cols-5 gap-x-5 gap-y-9 pb-24">
             <div v-for="imember of member" :key="imember">
                 <nuxt-link :to="{name: 'id', params: {id: imember.slug} }">
                     <div class="flex justify-center mb-5">

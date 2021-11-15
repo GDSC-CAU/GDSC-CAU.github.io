@@ -2,6 +2,10 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  googleAnalytics: {
+    id: 'G-78SE6PS7BD'
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'GDSC CAU',
@@ -34,6 +38,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-analytics'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

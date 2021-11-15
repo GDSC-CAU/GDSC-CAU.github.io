@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="max-w-6xl flex grid grid-cols-3 mx-auto px-5 gap-x-3 gap-y-3 pb-32">
+        <div class="max-w-6xl flex grid grid-cols-1 md:grid-cols-3 mx-auto px-5 gap-x-3 gap-y-3 pb-32">
             <div class="border border-gray-600 h-44 rounded-lg bg-white group">
                 <nuxt-link to="front-end">
                 <div class="h-2/5 border-b border-gray-600 flex items-center">
