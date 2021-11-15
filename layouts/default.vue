@@ -33,7 +33,7 @@ export default {
     }
 
     return {
-      title: "Google Analytics",
+      title: "GDSC CAU",
       script: [
 
       ].concat(productionScripts),
