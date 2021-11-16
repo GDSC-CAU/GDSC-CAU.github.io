@@ -1,6 +1,6 @@
 <template>
 <div class="w-full bg-gray-50">
-    <div class="related max-w-5xl mx-auto py-10 md:pb-24 md:pt-44">
+    <div class="related max-w-5xl mx-auto pt-28 pb-12 md:pb-24 md:pt-44">
         <SocialHead
         :title="article.title"
         :description="article.description"
@@ -18,15 +18,15 @@
 
         <nuxt-content :document="article" class="prose max-w-5xl custom-text px-6"/>
 
-        <div class="max-w-6xl mx-auto px-5 flex justify-center py-20 pb-6">
+        <div class="max-w-6xl mx-auto px-5 flex justify-center pt-16 md:pt-20 pb-6 md:pb-20">
             <div v-for="memberAuthor of member" :key="memberAuthor">
-                <div class="box mb-6 mx-auto">
+                <div class="box mb-4 md:mb-6 mx-auto">
                     <img class="profile" :src="require(`~/assets/resources/profile/${memberAuthor.img}`)" alt="">
                 </div>
-                <div class="text-gray-800 text-2xl pb-3.5 font-medium flex justify-center poppins">{{memberAuthor.name}}</div>
-                <div class="text-gray-500 pb-4 flex justify-center">{{memberAuthor.description}}</div>
+                <div class="text-gray-800 text-xl md:text-2xl pb-2 md:pb-3.5 font-medium flex justify-center poppins">{{memberAuthor.name}}</div>
+                <div class="text-gray-500 text-sm md:text-base pb-3 md:pb-4 flex justify-center px-3 text-center custom-text">{{memberAuthor.description}}</div>
                 <div class="flex justify-center itmes-center">
-                    <nuxt-link class="poppins text-blue-500 text-lg hover:underline" :to='`${memberAuthor.slug}`'>See More</nuxt-link>
+                    <nuxt-link class="poppins text-blue-500 text-base md:text-lg hover:underline" :to='`${memberAuthor.slug}`'>See More</nuxt-link>
                 </div>
             </div>
         </div>

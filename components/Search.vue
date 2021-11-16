@@ -1,13 +1,13 @@
 <template>
-      <div>
-        <div class="shadow-sm md:shadow w-full rounded-xl border-2 flex items-center mb-4 py-2.5 md:py-3.5">
+      <div class="max-w-6xl mx-auto px-6 pt-1 md:pt-0 md:0b-0">
+        <div class="shadow-sm md:shadow w-full rounded-lg border border-gray-300 flex items-center mb-4 py-2.5 md:py-3.5 px-5 bg-white">
             <SearchIcon />
             <input placeholder="다양한 주제의 글을 검색해보세요" v-model="query" type="search" autocomplete="off" 
-            class="flex-auto text-sm md:text-base text-gray-600 pr-3.5 md:pr-6 flex items-center placeholder-text-gray-400" />
+            class="ml-3 bg-white flex-auto text-sm md:text-base text-gray-800 pr-3.5 md:pr-6 flex items-center placeholder-text-gray-400" />
         </div>
 
-        <ul v-if="articles.length" class="shadow-sm md:shadow rounded-lg border-2 px-4">
-          <li class="text-gray-500 py-2.5 md:py-3.5 border-b text-sm md:text-base lastborder" v-for="article of articles" :key="article.slug">
+        <ul v-if="articles.length" class="shadow-sm md:shadow rounded-lg border border-gray-300 px-4 bg-white">
+          <li class="text-gray-600 py-2.5 md:py-3.5 border-b text-sm md:text-base lastborder" v-for="article of articles" :key="article.slug">
             <NuxtLink :to="{ name: 'slug', params: { slug: article.slug } }">{{ article.title }}</NuxtLink>
           </li>
         </ul>
