@@ -7,7 +7,7 @@
         :image="member.img"
         />
 
-        <div class="max-w-6xl mx-auto px-5 flex justify-center pt-28 md:pt-40">
+        <div class="max-w-6xl mx-auto px-6 flex justify-center pt-28 md:pt-40">
             <div>
                 <div class="lead-box w-40 h-40 md:w-52 md:h-52 mb-4 md:mb-6 mx-auto">
                     <img class="profile" :src="require(`~/assets/resources/profile/${member.img}`)" alt="">
@@ -18,21 +18,21 @@
             </div>
         </div>
 
-        <div class="pt-8 md:pt-16 flex justify-between items-center max-w-6xl mx-auto px-5">
+        <div class="pt-8 md:pt-16 flex justify-between items-center max-w-6xl mx-auto px-6">
             <div class="text-2xl md:text-3xl text-gray-800 font-medium poppins">Articles</div>
         </div>
 
-        <div class="max-w-6xl grid grid-cols-1 colspan mt-5 md:mt-7 pb-16 max-w-6xl mx-auto px-5">
+        <div class="max-w-6xl grid grid-cols-1 colspan mt-5 md:mt-8 pb-14 md:pb-24 max-w-6xl mx-auto px-6">
             <div class="group" v-for="marticle of memberArticles" :key="marticle">
                 <nuxt-link :to="{ name: 'slug', params: { slug: marticle.slug } }">
-                    <div class="article-inner flex justify-between items-center border-t py-8 border-gray-600">
+                    <div class="article-inner flex justify-between items-center border-t py-5 md:py-8 border-gray-600">
                         <div class="pr-4">
                             <p class="mb-1 md:mb-1.5 text-sm md:text-sm text-gray-400">{{marticle.category}} · {{marticle.author}}</p>
                             <h2 class="mb-1 md:mb-1.5 text-lg md:text-xl font-medium poppins text-gray-800">{{ marticle.title }}</h2>
                             <p class=" text-sm md:text-base text-gray-600 custom-text">{{marticle.description}}</p>
                         </div>
-                        <div class="pl-4 pr-6">
-                            <ExternalLinkLogo />
+                        <div class="pl-4 pr-6 hidden md:block">
+                            <ExternalLinkLogo class="fill-current text-gray-400 group-hover:text-gray-700 transition duration-200" />
                         </div>
                     </div>
                 </nuxt-link>
