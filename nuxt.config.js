@@ -11,7 +11,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Tech Blog Run by GDSC CAU' },
+      { hid: 'description', name: 'description', content: '중앙대학교 Google DSC 블로그입니다. 활동 관련 소식, 공부 내용 등을 주기적으로 업로드합니다.' },
       { name: 'format-detection', content: 'telephone=no' },
       // Twitter
       // Test on: https://cards-dev.twitter.com/validator
@@ -35,7 +35,7 @@ export default {
         hid: 'twitter:description',
         name: 'twitter:description',
         content:
-          'Tech Blog Run by GDSC CAU'
+          '중앙대학교 Google DSC 블로그입니다. 활동 관련 소식, 공부 내용 등을 주기적으로 업로드합니다.'
       },
       {
         hid: 'twitter:image',
@@ -61,7 +61,7 @@ export default {
         hid: 'og:description',
         property: 'og:description',
         content:
-          'Tech Blog Run by GDSC CAU'
+          '중앙대학교 Google DSC 블로그입니다. 활동 관련 소식, 공부 내용 등을 주기적으로 업로드합니다.'
       },
       {
         hid: 'og:image',

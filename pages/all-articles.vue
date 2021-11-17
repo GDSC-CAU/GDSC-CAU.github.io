@@ -41,7 +41,21 @@ export default {
     return {
       articles
     }
-  }
+  },
+
+    head: {
+        title: 'All Articles',
+        htmlAttrs: {
+        lang: 'ko'
+        },
+        meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'description', name: 'description', content: '중앙대학교 Google DSC 블로그입니다. 활동 관련 소식, 공부 내용 등을 주기적으로 업로드합니다.' },
+        { name: 'format-detection', content: 'telephone=no' }
+        ]
+    },
+
 }
 </script>
 

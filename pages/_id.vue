@@ -1,6 +1,12 @@
 <template>
     <div class="w-full bg-gray-50">
 
+        <SocialHead
+        :title="member.name"
+        :description="member.description"
+        :image="member.img"
+        />
+
         <div class="max-w-6xl mx-auto px-5 flex justify-center pt-28 md:pt-40">
             <div>
                 <div class="lead-box w-40 h-40 md:w-52 md:h-52 mb-4 md:mb-6 mx-auto">
@@ -48,7 +54,30 @@ export default {
             .sortBy('createdAt', 'desc')
             .fetch();
         return { member, memberArticles, authorName }
+    },
+
+    head() {
+        return {
+            title: this.member.name,
+            htmlAttrs: {
+            lang: 'ko'
+            },
+            meta: [
+            { charset: 'utf-8' },
+            { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+            { hid: 'description', name: 'description', content: '중앙대학교 Google DSC 블로그입니다. 활동 관련 소식, 공부 내용 등을 주기적으로 업로드합니다.' },
+            { name: 'format-detection', content: 'telephone=no' }
+            ],
+            link: [
+                {
+                hid: 'canonical',
+                rel: 'canonical',
+                href: `https://gdsc-cau.github.io/${this.$route.params.slug}`
+                }
+            ]
+        }
     }
+
 }
 </script>
 

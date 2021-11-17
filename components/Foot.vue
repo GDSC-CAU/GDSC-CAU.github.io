@@ -18,7 +18,7 @@
             </div>
 
             <div class="text-xs md:text-sm text-gray-500 mt-8 md:mt-0 mb-3">
-                Designed and Developed by <a href="https://github.com/thepenielcho" class="underline">Peniel Cho</a>
+                Designed and Developed by <a href="https://github.com/thepenielcho" target="blank" class="underline">Peniel Cho</a>
             </div>
 
         </div>
