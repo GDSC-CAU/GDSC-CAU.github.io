@@ -1,6 +1,6 @@
 ---
 name: Peniel Cho
-description: 코사다마 운영하고 있습니다.
+description: 현업과 가까운 Developer Relations Expert로 성장하기를 희망합니다. DS, ML, DL 관련 공부를 했으며 현재는 프론트를 배워가는 중입니다.
 role: Core Member
 slug: penielcho
 img: peniel.jpg
