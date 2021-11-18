@@ -148,4 +148,4 @@ module.exports = {
 
 기본적인 설치 및 적용 방법은 끝났습니다. 그럼 이제 직접 프로젝트에 적용해볼까요?
 
-> 본 포스팅은 [코사다마 블로그](https://www.blog.cosadama.com/)에 기고한 아티클을 재포스팅한 것입니다.
+> 본 포스팅은 [PENIELog](https://www.blog.penielcho.com/)의 아티클을 재포스팅한 것입니다.

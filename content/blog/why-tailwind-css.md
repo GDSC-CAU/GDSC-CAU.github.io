@@ -62,4 +62,4 @@ Tailwind의 경우 Responsive 디자인을 위한 미디어쿼리 작성이 매�
 
 다음 포스팅에서는 Nuxt 프로젝트에 Tailwind CSS를 설치하여 사용하는 방법에 대해 알아보도록 할게요.
 
-> 본 포스팅은 [코사다마 블로그](https://www.blog.cosadama.com/)에 기고한 아티클을 재포스팅한 것입니다.
+> 본 포스팅은 [PENIELog](https://www.blog.penielcho.com/)의 아티클을 재포스팅한 것입니다.
