@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/hongkyung", (function(a,b){return {data:[{member:{slug:"hongkyung",name:a,description:"결백, DP, 정말 먼 곳 등에 출현했습니다.",role:"Core Member",img:"hongkyung.jpg",dir:"\u002Fmembers",path:"\u002Fmembers\u002Fhongkyung",extension:".yaml",createdAt:b,updatedAt:b},memberArticles:[],authorName:a}],fetch:{},mutations:void 0}}("Hong Kyung","2021-11-18T09:02:01.351Z")));
