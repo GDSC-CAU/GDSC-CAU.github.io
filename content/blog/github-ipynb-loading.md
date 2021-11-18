@@ -5,7 +5,7 @@ slug: github-ipynb-loading
 img: ipython-github-error.png
 category: Data-Science
 author: Peniel Cho
-featured: Featured
+featured: none
 ---
 
 콜랩, 주피터에선 잘 열리던 ipynb 파일이 깃헙에서만 열리지 않는다면 해당 파일에서 사용한 패키지나 모듈이 깃헙에서 렌더링이 되지 않은 것!

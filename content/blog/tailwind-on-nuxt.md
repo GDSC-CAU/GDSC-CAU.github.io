@@ -6,7 +6,7 @@ slug: tailwind-on-nuxt
 img: tailwind.jpeg
 category: Front-End
 author: Peniel Cho
-featured: Featured
+featured: none
 
 ---
 

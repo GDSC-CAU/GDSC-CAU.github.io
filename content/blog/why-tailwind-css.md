@@ -6,7 +6,6 @@ slug: why-tailwind-css
 img: tailwind.jpeg
 category: Front-End
 author: Peniel Cho
-featured: none
 
 ---
 
