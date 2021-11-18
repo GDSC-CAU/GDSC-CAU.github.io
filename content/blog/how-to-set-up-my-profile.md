@@ -8,7 +8,7 @@ author: Peniel Cho
 featured: Featured
 ---
 
-> 프로필 작성 방법과 작성 시 지켜야할 규칙에 대해 안내 드리는 글입니다.
+> 프로필 작성 방법과 작성 시 지켜야할 규칙에 대해 안내 드립니다.
 
 ## 1. 확장명은 yaml이며, ~/content/members 디렉토리 내에 위치합니다.
 
