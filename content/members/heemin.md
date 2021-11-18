@@ -1,0 +1,7 @@
+---
+name: Heemin Kim
+description: 중앙대학교 3학년으로 현재 GDSC 운영진으로 활동하고 있습니다.
+role: Core Member
+slug: heemin
+img: heemin.jpg
+---

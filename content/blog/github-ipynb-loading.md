@@ -1,13 +1,11 @@
 ---
 title: 깃헙에서 ipynb 파일 로딩이 안돼요.
-description: 콜랩, 주피터에선 잘 열리던 ipynb 파일이 깃헙에서만 열리지 않는다면 해당 파일에서 사용한 패키지나 모듈이 깃헙에서 렌더링이 되지 않은 것! 해결 방법에 대해 알아보자.
+description: ipynb 파일이 깃헙에서만 열리지 않는다면 렌더링 오류가 발생한 것이다. 해결 방법에 대해 알아보자.
 slug: github-ipynb-loading
 img: ipython-github-error.png
-datetime: 2021. 07. 12.
-category: Application
-categoryeng: front-end
+category: Data-Science
 author: Peniel Cho
-featured: none
+featured: Featured
 ---
 
 콜랩, 주피터에선 잘 열리던 ipynb 파일이 깃헙에서만 열리지 않는다면 해당 파일에서 사용한 패키지나 모듈이 깃헙에서 렌더링이 되지 않은 것!
