@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/application", {data:[{articles:[{slug:"github-ipynb-loading",description:"콜랩, 주피터에선 잘 열리던 ipynb 파일이 깃헙에서만 열리지 않는다면 해당 파일에서 사용한 패키지나 모듈이 깃헙에서 렌더링이 되지 않은 것! 해결 방법에 대해 알아보자.",title:"깃헙에서 ipynb 파일 로딩이 안돼요.",img:"ipython-github-error.png",datetime:"2021. 07. 12.",category:"Application",author:"Peniel Cho"}]}],fetch:{},mutations:void 0});

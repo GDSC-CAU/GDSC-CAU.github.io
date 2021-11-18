@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/data-science", {data:[{articles:[{slug:"open-py-on-colab",description:"파이썬 확장자로 작성한 파이썬 모듈이 Colab에서 불러와지지 않는 상황의 해결방법에 대해 알아보자.",title:"Colab에서 .py 파일 오픈하기",img:"python.jpg",datetime:"2021. 07. 03.",category:"Data-Science",author:"Wendy Rhoads"}]}],fetch:{},mutations:void 0});

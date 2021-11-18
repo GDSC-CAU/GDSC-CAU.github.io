@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/general", {data:[{articles:[{slug:"how-to-post",description:"포스팅하는 방법과 올리는 과정에서 지켜야할 규칙들에 대해 설명드리겠습니다.",title:"아티클 포스팅하는 법",img:"rules.jpg",category:"General",author:"Peniel Cho"}]}],fetch:{},mutations:void 0});

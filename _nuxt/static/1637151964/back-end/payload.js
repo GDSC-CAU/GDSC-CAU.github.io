@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/back-end", {data:[{articles:[{slug:"hanguel-error-fix-matplotlib",description:"matplotlib의 한글 깨짐 해결 방법은 Colab과 Jupyter 각각 차이가 있다. 이에 대해 알아보자.",title:"Colab, Jupyter에서 matplotlib 한글 깨짐 해결하기",img:"hanguel-error-fix-matplotlib.png",datetime:"2021. 07. 08.",category:"Back-End",author:"Taylor Mason"}]}],fetch:{},mutations:void 0});
