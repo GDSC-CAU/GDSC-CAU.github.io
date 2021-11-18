@@ -1,5 +1,3 @@
 # Google Developer Student Clubs CAU Blog
 
----
-
-너무 힘드니 README는 나중에 작성하는 걸로...
+11월 중으로 업데이트 하도록 하겠습니다.
