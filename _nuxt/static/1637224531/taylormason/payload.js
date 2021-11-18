@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/taylormason", (function(a,b){return {data:[{member:{slug:"taylormason",name:a,description:"퀀트 투자의 천재입니다.",role:"Lead",img:"taylor.png",dir:"\u002Fmembers",path:"\u002Fmembers\u002Ftaylormason",extension:".yaml",createdAt:b,updatedAt:b},memberArticles:[],authorName:a}],fetch:{},mutations:void 0}}("Taylor Mason","2021-11-18T08:34:19.594Z")));
