@@ -2,7 +2,7 @@
 title: "[공지] 프로필 작성 방법"
 description: 프로필 작성 시 지켜야 할 규칙들에 대해 안내 드립니다.
 slug: how-to-set-up-my-profile
-img: iam.jpg
+img: iam.png
 category: General
 author: Peniel Cho
 featured: Featured

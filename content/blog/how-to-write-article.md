@@ -3,7 +3,7 @@
 title: "[공지] 아티클 작성 방법"
 description: 아티클 작성 시 지켜야 할 규칙들에 대해 안내 드립니다.
 slug: how-to-write-article
-img: writing.jpg
+img: writing.png
 category: General
 author: Peniel Cho
 featured: Featured
