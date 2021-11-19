@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/tim-cook", (function(a,b){return {data:[{member:{slug:"tim-cook",name:a,description:"Apple CEO입니다.",role:"Member",img:"tim-cook.png",dir:"\u002Fmembers",path:"\u002Fmembers\u002Ftim-cook",extension:".yaml",createdAt:b,updatedAt:b},memberArticles:[],authorName:a}],fetch:{},mutations:void 0}}("Tim Cook","2021-11-19T11:45:02.448Z")));
