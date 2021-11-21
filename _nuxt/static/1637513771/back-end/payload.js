@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/back-end", {data:[{articles:[]}],fetch:{},mutations:void 0});
