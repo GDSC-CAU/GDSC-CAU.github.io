@@ -13,7 +13,7 @@ featured: none
 
 [지난 포스트](https://www.blog.penielcho.com/tailwind-on-nuxt)에서는 왜 Tailwind가 좋은지에 대해 알아봤다면, 이번엔 실제 프로젝트에 Tailwind CSS를 어떻게 적용하는지에 대해 알아볼게요. Tailwind는 다양한 프로젝트에 versatile하게 사용할 수 있는 프레임워크지만, 오늘은 제가 요즘 가장 많이 사용하고 있는 Vue 프레임워크인 Nuxt 환경을 기반으로 Tailwind CSS 사용법을 말씀드리도록 할게요. 사실 Nuxt라고 해도 다른 프레임워크들과 크게 다르지 않을 거에요.
 
-![Tailwind 지원 프레임워크](tailwind-on-nuxt/01.png)
+![Tailwind 지원 프레임워크](/tailwind-on-nuxt/01.png)
 
 추가로, Tailwind CSS가 공식적으로 지원하는 프레임워크 및 툴은 이렇게 6가지에요. 각 프레임워크, 툴 별 설치 방법을 알고 싶다면 [공식 문서](https://tailwindcss.com/docs/installation)를 참고해주세요.
 
@@ -21,7 +21,7 @@ featured: none
 
 ### 프로젝트 생성시 설치하기
 
-![npx를 통한 tailwind 설치](tailwind-on-nuxt/02.png)
+![npx를 통한 tailwind 설치](/tailwind-on-nuxt/02.png)
 
 Nuxt의 경우, 프로젝트를 만들 때 1차적으로 tailwind css를 설치할 수 있어요. 터미널에  `npx create-next-app`  명령어를 쳐서 프로젝트를 생성하면, 어떤 라이브러리와 프레임워크들을 함께 설치할지를 물어보거든요. 이때 Tailwind CSS를 선택해주시면 돼요.
 

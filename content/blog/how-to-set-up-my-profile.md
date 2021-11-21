@@ -20,7 +20,7 @@ featured: Featured
 
 - 파일은 ~/content/members 디렉토리 내에 위치해야 합니다. 아래는 GDSC-CAU.github.io 레포지토리의 구조입니다. 이 중 content 폴더로 이동 후, 그 안의 members 폴더 안에 들어가 md 파일을 생성하시면 됩니다.
 
-  ![레포지토리 구조](how-to-set-up-my-profile/01.png)
+  ![레포지토리 구조](/how-to-set-up-my-profile/01.png)
 
 아티클 md 파일에서는 YAML을 삽입해서 사용했지만, 프로필 작성은 완전히 YAML 파일로 작성할 겁니다. 삽입이 아닌 온전한 YAML 파일이니 대시로 묶어주실 필요는 없고요. 아래에서 속성 및 대응 값을 설명 드릴게요.
 
@@ -44,7 +44,7 @@ featured: Featured
 
 - **img**: 본인이 나타난 사진의 파일명을 적어주시면 돼요. 경로까지 작성하실 필요는 없습니다. 사진 파일은 ~/assets/resources/profile 디렉토리 내에 넣어주세요.
 
-  ![profile 폴더 내 이미지 삽입](how-to-set-up-my-profile/02.png)
+  ![profile 폴더 내 이미지 삽입](/how-to-set-up-my-profile/02.png)
 
 ### 예시
 

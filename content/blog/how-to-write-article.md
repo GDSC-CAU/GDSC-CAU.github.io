@@ -21,7 +21,7 @@ featured: Featured
 
 - 파일은 ~/content/blog 디렉토리 내에 위치해야 합니다. 아래는 GDSC-CAU.github.io 레포지토리의 구조입니다. 이 중 content 폴더로 이동 후, 그 안의 blog 폴더 안에 들어가 md 파일을 생성하시면 됩니다.
 
-  ![레포지토리 구조](how-to-write-article/01.png)
+  ![레포지토리 구조](/how-to-write-article/01.png)
 
 ## 2. YAML Front Matter 작성은 필수입니다.
 
@@ -91,10 +91,10 @@ H1 사용시 제목보다 폰트 크기가 커지게 됩니다. 혹시 해당 �
 
 일반적으로 상대 경로를 통해 이미지 파일을 불러올 경우 ~/를 통해 최상위 폴더에서 파일 루트를 작성하거나 현재 디렉토리부터 시작해 파일 루트를 작성합니다. 그러나 Nuxt의 경우 md 파일에서 이미지를 불러오는 방식이 조금 특이합니다. static 폴더에서 기본 루트가 시작되기 때문입니다.
 
-![static 폴더 내 이미지 삽입](how-to-write-article/02.png)
+![static 폴더 내 이미지 삽입](/how-to-write-article/02.png)
 
 따라서 md 파일 내에 이미지가 필요한 경우 위 이미지와 같이 ~/static 디렉토리에 slug와 동일한 이름의 폴더를 만들어 필요한 이미지들을 넣으신 후, 해당 폴더명부터 시작하는 상대경로로 이미지를 불러오시면 됩니다. 마크다운 문법에 따른 예시는 아래와 같습니다.
 
 ```markdown
-![Tailwind Breakpoint Prefix 이미지](why-tailwind-css/05.png)
+![Tailwind Breakpoint Prefix 이미지](/why-tailwind-css/05.png)
 ```

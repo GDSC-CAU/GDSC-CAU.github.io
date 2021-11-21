@@ -27,7 +27,8 @@
     <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-6 md:gap-y-0 pt-10">
 
       <div v-for="ftarticle of featured" :key="ftarticle" class="nthz hidden md:block">
-        <nuxt-link :to="{ name: 'slug', params: { slug: ftarticle.slug } }">
+        <!-- <nuxt-link :to="{ name: 'slug', params: { slug: ftarticle.slug } }"> -->
+        <nuxt-link :to='`article/${ftarticle.slug}`'>
           <div class="h-72 md:h-96 custom-radius group">
             <div class="h-3/5 flex items-center justify-center">
               <div class="featbox">
@@ -44,7 +45,8 @@
       </div>
 
       <div v-for="featarticle of featuredone" :key="featarticle" class="block md:hidden">
-        <nuxt-link :to="{ name: 'slug', params: { slug: featarticle.slug } }">
+        <!-- <nuxt-link :to="{ name: 'slug', params: { slug: featarticle.slug } }"> -->
+        <nuxt-link :to='`article/${featarticle.slug}`'>
           <div class="back-yellow rounded-lg h-52 py-5 px-6 relative">
             <div>
               <p class="poppins text-gray-800">{{featarticle.category}}</p>
@@ -86,7 +88,8 @@
 
     <div class="max-w-6xl grid grid-cols-1 colspan mt-5 md:mt-8 max-w-6xl mx-auto px-6">
         <div class="group" v-for="article of articles" :key="article">
-            <nuxt-link :to="{ name: 'slug', params: { slug: article.slug } }">
+            <!-- <nuxt-link :to="{ name: 'slug', params: { slug: article.slug } }"> -->
+            <nuxt-link :to='`article/${article.slug}`'>
                 <div class="article-inner flex justify-between items-center border-t py-5 md:py-8 border-gray-600">
                   <div class="pr-4">
                       <p class="mb-1 md:mb-1.5 text-sm md:text-sm text-gray-400">{{article.category}} · {{article.author}}</p>

@@ -8,11 +8,21 @@
         />
 
         <div class="max-w-3xl mx-auto">
-            <p class="text-base md:text-xl text-gray-400 text-center mb-2"><nuxt-link class="hover:underline" :to='`${article.category}`'>{{article.category}}</nuxt-link></p>
+            <p class="text-base md:text-xl text-gray-400 text-center mb-2">
+                <!-- <nuxt-link class="hover:underline" :to='`${article.category}`'> -->
+                <nuxt-link :to="{path: `/${article.category}`}" replace class="hover:underline">
+                    {{article.category}}
+                </nuxt-link>
+            </p>
             <p class="custom-text leading-snug md:leading-normal px-5 md:px-0 mb-2 text-2xl md:text-5xl text-center text-gray-800 title font-semibold">{{article.title}}</p>
             <p class="text-base md:text-xl text-gray-500 text-center mb-16">
                 {{formatDate(article.createdAt)}} · by
-                <span v-for="memberAuthor of member" :key="memberAuthor"> <nuxt-link class="hover:underline" :to='`${memberAuthor.slug}`'>{{memberAuthor.name}}</nuxt-link></span>
+                <span v-for="memberAuthor of member" :key="memberAuthor"> 
+                    <!-- <nuxt-link class="hover:underline" :to='`${memberAuthor.slug}`'> -->
+                    <nuxt-link :to="{path: `/member/${memberAuthor.slug}`}" replace class="hover:underline">
+                        {{memberAuthor.name}}
+                    </nuxt-link>
+                </span>
             </p>
         </div>
 
@@ -26,7 +36,9 @@
                 <div class="text-gray-800 text-xl md:text-2xl pb-2 md:pb-3.5 font-medium flex justify-center poppins">{{memberAuthor.name}}</div>
                 <div class="text-gray-500 text-sm md:text-base pb-3 md:pb-4 flex justify-center px-3 text-center custom-text">{{memberAuthor.description}}</div>
                 <div class="flex justify-center itmes-center">
-                    <nuxt-link class="poppins text-blue-500 text-base md:text-lg hover:underline" :to='`${memberAuthor.slug}`'>See More</nuxt-link>
+                    <nuxt-link class="poppins text-blue-500 text-base md:text-lg hover:underline" :to="{path: `/member/${memberAuthor.slug}`}" replace>
+                        See More
+                    </nuxt-link>
                 </div>
             </div>
         </div>

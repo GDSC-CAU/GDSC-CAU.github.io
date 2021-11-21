@@ -10,19 +10,19 @@
                         </nuxt-link>
                     </li>
                     <li class="hidden md:block text-gray-500 pl-3 hover:text-gray-800 transition hover:duration-300 font-light">
-                        <nuxt-link to="about" class="poppins">About</nuxt-link>
+                        <nuxt-link :to="{path: '/about'}" replace class="poppins">About</nuxt-link>
                     </li>
                     <li class="hidden md:block poppins text-gray-500 hover:text-gray-800 transition hover:duration-300 font-light">
-                        <nuxt-link to="all-articles" class="poppins">Articles</nuxt-link>
+                        <nuxt-link :to="{path: '/all-articles'}" replace class="poppins">Articles</nuxt-link>
                     </li>
                     <li class="hidden md:block poppins text-gray-500 hover:text-gray-800 transition hover:duration-300 font-light">
-                        <nuxt-link to="categories" class="poppins">Categories</nuxt-link>
+                        <nuxt-link :to="{path: '/categories'}" replace class="poppins">Categories</nuxt-link>
                     </li>
                     <li class="hidden md:block poppins text-gray-500 hover:text-gray-800 transition hover:duration-300 font-light">
-                        <nuxt-link to="members" class="poppins">Members</nuxt-link>
+                        <nuxt-link :to="{path: '/members'}" replace class="poppins">Members</nuxt-link>
                     </li>
                     <li class="hidden md:block poppins text-gray-500 hover:text-gray-800 transition hover:duration-300 font-light">
-                        <nuxt-link to="projects" class="poppins">Projects</nuxt-link>
+                        <nuxt-link :to="{path: '/projects'}" replace class="poppins">Projects</nuxt-link>
                     </li>
                 </ul>
             </div>
@@ -78,11 +78,11 @@
                 </div>
 
                 <ul class="divide-y font-light">
-                <li><nuxt-link to="about" @click="isOpen = false" class="text-gray-500 my-4 inline-block poppins">About</nuxt-link></li>
-                <li><nuxt-link to="all-articles" @click="isOpen = false" class="text-gray-500 my-4 inline-block poppins">Articles</nuxt-link></li>
-                <li><nuxt-link to="categories" @click="isOpen = false" class="text-gray-500 my-4 inline-block poppins">Categories</nuxt-link></li>
-                <li><nuxt-link to="members" @click="isOpen = false" class="text-gray-500 my-4 inline-block poppins">Members</nuxt-link></li>
-                <li><nuxt-link to="projects" @click="isOpen = false" class="text-gray-500 my-4 inline-block poppins">Projects</nuxt-link></li>
+                <li><nuxt-link :to="{path: '/about'}" replace @click="isOpen = false" class="text-gray-500 my-4 inline-block poppins">About</nuxt-link></li>
+                <li><nuxt-link :to="{path: '/all-articles'}" replace @click="isOpen = false" class="text-gray-500 my-4 inline-block poppins">Articles</nuxt-link></li>
+                <li><nuxt-link :to="{path: '/categories'}" replace @click="isOpen = false" class="text-gray-500 my-4 inline-block poppins">Categories</nuxt-link></li>
+                <li><nuxt-link :to="{path: '/members'}" replace @click="isOpen = false" class="text-gray-500 my-4 inline-block poppins">Members</nuxt-link></li>
+                <li><nuxt-link :to="{path: '/projects'}" @click="isOpen = false" class="text-gray-500 my-4 inline-block poppins">Projects</nuxt-link></li>
                 </ul>
 
                 <div class="flex items-center justify-center">
