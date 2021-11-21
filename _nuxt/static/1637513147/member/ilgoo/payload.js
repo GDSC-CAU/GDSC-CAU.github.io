@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/member/ilgoo", (function(a,b){return {data:[{member:{slug:"ilgoo",name:a,description:"중앙대학교 GDSC 운영진으로 활동하고 있습니다.",role:"Core Member",img:"ilgoo.jpg",dir:"\u002Fmembers",path:"\u002Fmembers\u002Filgoo",extension:".yaml",createdAt:b,updatedAt:b},memberArticles:[],authorName:a}],fetch:{},mutations:void 0}}("IlGoo Yeo","2021-11-21T16:44:36.307Z")));
