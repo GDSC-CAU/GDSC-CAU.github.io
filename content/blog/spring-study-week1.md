@@ -2,7 +2,7 @@
 
 title: 스프링 스터디-1주차
 description: Spring Data Jpa를 활용한 RDB 관리에 대해 소개합니다.
-slug: spring-study-preview
+slug: spring-study-week1
 category: Back-End
 author: IlGoo Yeo
 featured: none
