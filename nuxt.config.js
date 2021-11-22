@@ -141,7 +141,10 @@ export default {
   modules: [
 
     //https://github.com/dword-design/nuxt-content-git
-    'nuxt-content-git',
+    ['nuxt-content-git', {
+      createdAtName : 'gitCreatedAt',
+      updatedAtName : 'gitUpdatedAt',
+    }],
 
     // https://go.nuxtjs.dev/content
     '@nuxt/content',

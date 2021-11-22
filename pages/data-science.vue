@@ -38,7 +38,7 @@ export default {
     const articles = await $content('blog', params.slug)
       .where({category: 'Data-Science'})
       .only(['title', 'description', 'img', 'datetime', 'category', 'author', 'slug'])
-      .sortBy('createdAt', 'desc')
+      .sortBy('gitCreatedAt', 'desc')
       .fetch();
     return {
       articles

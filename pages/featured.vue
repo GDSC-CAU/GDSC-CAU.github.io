@@ -36,7 +36,7 @@ export default {
     const featured = await $content('blog', params.slug)
       .where({featured: 'Featured'})
       .only(['title', 'description', 'img', 'datetime', 'category', 'author', 'slug'])
-      .sortBy('createdAt', 'desc')
+      .sortBy('gitUpdatedAt', 'desc')
       .fetch();
     return {
       featured
