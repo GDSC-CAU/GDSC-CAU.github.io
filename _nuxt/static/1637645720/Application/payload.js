@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/Application", {data:[{articles:[{slug:"flutter-study-week1",description:"Flutter 스터디 1주차에 대한 내용입니다.",title:"Flutter 2.0의 null safety 이해하기",category:"Application",author:"MinJun Choi"}]}],fetch:{},mutations:void 0});
