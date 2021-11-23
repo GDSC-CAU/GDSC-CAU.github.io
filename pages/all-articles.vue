@@ -37,7 +37,7 @@ export default {
   async asyncData({ $content, params }) {
     const articles = await $content('blog', params.slug)
       .only(['title', 'description', 'img', 'datetime', 'category', 'author', 'slug'])
-      .sortBy('gitCreatedAt', 'desc')
+      .sortBy('createdAt', 'desc')
       .fetch();
     return {
       articles

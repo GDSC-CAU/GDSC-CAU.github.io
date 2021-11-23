@@ -128,19 +128,19 @@ export default {
   async asyncData({ $content, params }) {
     const articles = await $content('blog', params.slug)
       .only(['title', 'description', 'img', 'datetime', 'category', 'author', 'slug'])
-      .sortBy('gitCreatedAt', 'desc')
+      .sortBy('createdAt', 'desc')
       .limit(5)
       .fetch();
     const featured = await $content('blog', params.slug)
       .where({featured: 'Featured'})
       .only(['title', 'description', 'img', 'datetime', 'category', 'author', 'slug'])
-      .sortBy('gitUpdatedAt', 'desc')
+      .sortBy('updatedAt', 'desc')
       .limit(3)
       .fetch();
     const featuredone = await $content('blog', params.slug)
       .where({featured: 'Featured'})
       .only(['title', 'description', 'img', 'datetime', 'category', 'author', 'slug'])
-      .sortBy('gitUpdatedAt', 'desc')
+      .sortBy('updatedAt', 'desc')
       .limit(1)
       .fetch();
     return {

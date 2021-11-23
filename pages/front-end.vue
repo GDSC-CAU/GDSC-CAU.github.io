@@ -38,7 +38,7 @@ export default {
     const articles = await $content('blog', params.slug)
       .where({category: 'Front-End'})
       .only(['title', 'description', 'img', 'datetime', 'category', 'author', 'slug'])
-      .sortBy('gitCreatedAt', 'desc')
+      .sortBy('createdAt', 'desc')
       .fetch();
     return {
       articles
