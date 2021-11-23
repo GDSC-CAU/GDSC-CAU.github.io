@@ -14,7 +14,7 @@
                 </div>
                 <div class="text-gray-800 text-2xl md:text-3xl font-medium flex justify-center poppins pb-0 md:pb-1.5">{{member.name}}</div>
                 <div class="flex justify-center poppins text-lg md:text-xl text-gray-800 pb-1.5 md:pb-3">{{member.role}}</div>
-                <div class="text-gray-500 pb-4 flex justify-center">{{member.description}}</div>
+                <div class="text-gray-500 px-0 md:px-20 pb-4 flex justify-center text-center custom-text">{{member.description}}</div>
             </div>
         </div>
 
