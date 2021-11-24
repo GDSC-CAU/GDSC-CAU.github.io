@@ -13,7 +13,7 @@ author: MinJun Choi
 
 #### Contents
 1. #### Null 이란 무엇인가?  
-    * Null 은 왜 필요할까?  
+    * Null 은 왜 필요할까? 
     
 1. #### 기존 코드의 문제점과 해결방법
     * ? 의 사용법
@@ -25,7 +25,7 @@ author: MinJun Choi
 #### 1. Null이란 무엇인가?
 
 우선 null이란, 아직 값이 정해지지 않은 것을 의미합니다.
-그럼 이 null이라는 것이 왜 필요할까요?
+그럼 null이라는 것이 왜 필요할까요?
 
 #### null의 필요성
 
