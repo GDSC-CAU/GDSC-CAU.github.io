@@ -37,8 +37,7 @@ export default {
   async asyncData({ $content, params }) {
     const articles = await $content('blog', params.slug)
       .where({category: 'Application'})
-      .only(['title', 'description', 'img', 'datetime', 'category', 'author', 'slug'])
-      .sortBy('createdAt', 'desc')
+      .sortBy('datetime', 'desc')
       .fetch();
     return {
       articles

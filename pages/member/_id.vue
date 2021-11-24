@@ -53,7 +53,7 @@ export default {
         const memberArticles = await $content('blog', params.slug)
             .where({author: authorName})
             .only(['title', 'description', 'img', 'datetime', 'category', 'author', 'slug'])
-            .sortBy('createdAt', 'desc')
+            .sortBy('datetime', 'desc')
             .fetch();
         return { member, memberArticles, authorName }
     },

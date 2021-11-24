@@ -35,8 +35,7 @@ export default {
   async asyncData({ $content, params }) {
     const featured = await $content('blog', params.slug)
       .where({featured: 'Featured'})
-      .only(['title', 'description', 'img', 'datetime', 'category', 'author', 'slug'])
-      .sortBy('updatedAt', 'desc')
+      .sortBy('datetime', 'desc')
       .fetch();
     return {
       featured
