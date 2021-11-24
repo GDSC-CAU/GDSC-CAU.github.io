@@ -6,6 +6,7 @@ img: iam.png
 category: General
 author: Peniel Cho
 featured: Featured
+datetime: 2021-11-18
 ---
 
 > 프로필 작성 방법과 작성 시 지켜야할 규칙에 대해 안내 드립니다.
