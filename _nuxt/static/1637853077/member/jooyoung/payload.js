@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/member/jooyoung", (function(a,b){return {data:[{member:{slug:"jooyoung",name:a,description:"소프트웨어학부 3학년",role:"Member",img:"jooyoung.jpg",dir:"\u002Fmembers",path:"\u002Fmembers\u002Fjooyoung",extension:".yaml",createdAt:b,updatedAt:b},memberArticles:[],authorName:a}],fetch:{},mutations:void 0}}("Jooyoung Lee","2021-11-25T00:56:38.000Z")));

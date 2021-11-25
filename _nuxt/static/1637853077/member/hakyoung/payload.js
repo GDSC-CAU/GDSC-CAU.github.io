@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/member/hakyoung", (function(a,b){return {data:[{member:{slug:"hakyoung",name:a,description:"중앙대학교 GDSC 멤버로 활동하고 있습니다.",role:"Member",img:"hakyoung.jpg",dir:"\u002Fmembers",path:"\u002Fmembers\u002Fhakyoung",extension:".yaml",createdAt:b,updatedAt:b},memberArticles:[],authorName:a}],fetch:{},mutations:void 0}}("Hakyoung Jung","2021-11-24T08:52:37.000Z")));
