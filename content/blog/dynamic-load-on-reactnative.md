@@ -1,5 +1,5 @@
 ---
-title: React-nativa에서 로컬 파일을 동적으로 가져올 수 있을까?
+title: React-native에서 로컬 파일을 동적으로 가져올 수 있을까?
 description: React-native의 require 메서드에 관한 내용입니다.
 slug: dynamic-load-on-reactnative
 category: Front-End
