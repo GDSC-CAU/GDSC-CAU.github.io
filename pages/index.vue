@@ -127,17 +127,17 @@
 export default {
   async asyncData({ $content, params }) {
     const articles = await $content('blog', params.slug)
-      .sortBy('datetime', 'desc')
+      .sortBy('createdAt', 'desc')
       .limit(5)
       .fetch();
     const featured = await $content('blog', params.slug)
       .where({featured: 'Featured'})
-      .sortBy('datetime', 'desc')
+      .sortBy('createdAt', 'desc')
       .limit(3)
       .fetch();
     const featuredone = await $content('blog', params.slug)
       .where({featured: 'Featured'})
-      .sortBy('datetime', 'desc')
+      .sortBy('createdAt', 'desc')
       .limit(1)
       .fetch();
     return {

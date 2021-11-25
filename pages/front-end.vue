@@ -37,7 +37,7 @@ export default {
   async asyncData({ $content, params }) {
     const articles = await $content('blog', params.slug)
       .where({category: 'Front-End'})
-      .sortBy('datetime', 'desc')
+      .sortBy('createdAt', 'desc')
       .fetch();
     return {
       articles
