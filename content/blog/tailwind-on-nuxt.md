@@ -7,7 +7,6 @@ img: tailwind.jpeg
 category: Front-End
 author: Peniel Cho
 featured: none
-datetime: 2021-11-17
 
 ---
 

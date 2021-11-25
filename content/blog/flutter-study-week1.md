@@ -4,7 +4,6 @@ description: Flutter 스터디 1주차에 대한 내용입니다.
 slug: flutter-study-week1
 category: Application
 author: MinJun Choi
-datetime: 2021-11-23
 ---
 
 
