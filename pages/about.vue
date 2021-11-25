@@ -45,7 +45,6 @@
         <div class="pt-12 md:pt-16 max-w-6xl mx-auto px-10">
             <div class="">
                 <div v-for="leadm of Lead" :key="leadm">
-                    <!-- <nuxt-link class="max-x-3xl mx-auto md:flex md:justify-between md:items-center group" :to="{name: 'id', params: {id: leadm.slug} }"> -->
                     <nuxt-link :to='`member/${leadm.slug}`' class="max-x-3xl mx-auto md:flex md:justify-between md:items-center group">
                         <div class="flex justify-center">
                             <div class="lead-box w-40 h-40 md:w-52 md:h-52">
@@ -72,7 +71,6 @@
 
         <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-5 gap-x-3 md:gap-x-5 gap-y-9 pb-20 md:pb-24">
             <div v-for="imember of coreMember" :key="imember">
-                <!-- <nuxt-link class="group" :to="{name: 'id', params: {id: imember.slug} }"> -->
                 <nuxt-link :to='`member/${imember.slug}`' class="group">
                     <div class="flex justify-center mb-3 md:mb-5">
                         <div class="lead-box h-32 w-32 md:h-40 md:w-40">
