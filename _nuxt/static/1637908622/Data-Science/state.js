@@ -1,1 +1,0 @@
-window.__NUXT__=(function(a){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1637908622",layout:"default",error:a,serverRendered:true,routePath:"\u002FData-Science",config:{googleAnalytics:{id:void 0},_app:{basePath:"\u002F",assetsPath:"\u002F_nuxt\u002F",cdnURL:a},content:{dbHash:"5b81d16d"}}}}(null));
