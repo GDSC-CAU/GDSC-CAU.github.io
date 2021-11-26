@@ -67,7 +67,7 @@ python manage.py startapp blogapp
 
 * 생성한 <u>blogapp</u>을 장고가 인식하게 하기 위해서 <u>settings.py</u> 설정
 
-![app 등록](/django-study-week1/01.png)
+![app 등록](/django-study-week1/01.PNG)
 
  + <u>INSTALLED_APPS</u>에 프로젝트에서 사용하는 앱을 등록
 
@@ -76,7 +76,7 @@ python manage.py startapp blogapp
 
 * <u>templates</u>에서 홈 화면을 구성하기 위한 html 문서를 관리
 
-![templates 이동](/django-study-week1/02.png)
+![templates 이동](/django-study-week1/02.PNG)
 
 <u>blogapp</u> 안에서 홈 화면을 띄울 것이므로 <u>**templates**</u>를 <u>**blogapp**</u>으로 옮김
 
@@ -144,7 +144,7 @@ python manage.py startapp blogapp
   + media 파일은 사용자가 업로드하는 파일
   + 개발 단계에서 관리할 수 없으므로 따로 분류하여 관리
 
-![static]](/django-study-week1/05.png)
+![static]](/django-study-week1/05.PNG)
 
 <u>blogapp</u> 내에 <u>static</u> 디렉토리를 생성하여 부트스트랩 html의 css 파일을 관리
 
@@ -168,7 +168,7 @@ python manage.py collectstatic
 
 * index.html 수정
 
-  ![index.html]](/django-study-week1/06.png)
+  ![index.html]](/django-study-week1/06.PNG)
 
   부트스트랩 html의 코드를 복사하여 장고 프로젝트의 <u>index.html</u>에 붙여넣기
 
@@ -211,7 +211,7 @@ python manage.py collectstatic
 
 * 블로그 홈 화면 구성과 동일한 방식
 
-![navbar-template]](/django-study-week1/07.png)
+![navbar-template]](/django-study-week1/07.PNG)
 
 * <u>template</u> 폴더에서 <u>blogMain.html</u> 문서를 생성한 후, 부트스트랩의 html 코드를 복사하여 붙여넣기
 * 부트스트랩의 css 파일을 복사하여 <u>static</u> - <u>css</u>에 붙여넣기
@@ -286,7 +286,7 @@ python manage.py collectstatic
 
   <u>admin.py</u> 파일에 블로그 모델 등록
 
-![admin-page]](/django-study-week1/08.png)
+![admin-page]](/django-study-week1/08.PNG)
 
 admin 페이지에서 블로그를 추가하였을 때, 블로그 객체가 생성된다면 성공!
 
