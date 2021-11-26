@@ -4,7 +4,6 @@ description: Java 스터디 1주차에 대한 내용입니다.
 slug: Java-study-week1
 category: Back-End
 author: HaKyoung Jung
-datetime: 2021-11-26
 ---
 
 
