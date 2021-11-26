@@ -3,8 +3,7 @@ title: 딥러닝 스터디 week1
 description: 크롤링
 slug: deeplearning_study_week1
 category: Data Science
-author: 
-featured: none
+author: 이재형
 ---
 
 ### BeautifulSoup
