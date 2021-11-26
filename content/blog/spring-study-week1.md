@@ -6,7 +6,6 @@ slug: spring-study-week1
 category: Back-End
 author: IlGoo Yeo
 featured: none
-datetime: 2021-11-22
 
 ---
 
