@@ -3,7 +3,7 @@ title: Java 이해하기
 description: Java 스터디 1주차에 대한 내용입니다.
 slug: Java-study-week1
 category: Back-End
-author: HaKyoung Jung
+author: Hakyoung Jung
 ---
 
 
@@ -44,7 +44,7 @@ Java를 본격적으로 시작하기에 앞서,  Java의 기본적인 구조와 
 Java는 객체지향 프로그래밍 언어이기 때문에, 기본적으로 클래스 구조에서 시작한다. 클래스는 객체를 만드는 기능을 가진다.
     + '클래스(class)'는 '과자틀', '객체(object)'는 '과자틀에 의해 만들어진 과자'라고 이해하면 쉽다.
     + 이에 대해서는 이후에 더 자세히 알아보도록 하자.
-```
+```java
 // 클래스 선언
 public class Test { // 클래스 안에 변수, 메소드(함수), 상수 등의 요소 작성
 
@@ -67,7 +67,7 @@ public class Test { // 클래스 안에 변수, 메소드(함수), 상수 등의
 * 주석: 자바에서 사용할 수 있는 주석은 두 가지이다.
 1) 라인주석(//)
 2) 블록주석(/* */)
-```
+```java
 /*
 이 프로그램의 저작권은 000에게 있습니다.
 Copyright 2021.
@@ -85,13 +85,13 @@ public class Test { // 클래스 안에 변수, 메소드(함수), 상수 등의
 
 Java에서 사용하는 자료형은 다음 표로 정리할 수 있다.
 
-![Java 자료형](static\java-study-week\01.png)
+![Java 자료형](/java-study-week/01.png)
 
 * 숫자 자료형: 숫자 형태로 이루어진 자료형 ex) 정수, 실수, (드문 경우)8진수, 16진수 등
 
 아래 코드를 통해 숫자 자료형이 어떻게 사용되는지 알아보자.
 
-```
+```java
  // 숫자 자료형
     // 정수
     int member = 20; // 보편적으로 쓰이는 정수 자료형
@@ -109,7 +109,7 @@ Java에서 사용하는 자료형은 다음 표로 정리할 수 있다.
 * 문자와 문자열 자료형: 한 개의 문자값은 char / 문자열(문장)은 String을 이용하여 표현한다.
 
 아래 코드를 통해 부울, 문자, 문자열 자료형이 어떻게 사용되는지 알아보자.
-```
+```java
     // 부울 자료형
     boolean isGDSC = true;
     // 조건문에서의 사용
@@ -130,7 +130,7 @@ Java에서 사용하는 자료형은 다음 표로 정리할 수 있다.
 + primitive(원시) 자료형 ex) int, long, double, float, boolean, char 등 은 new 키워드로 생성될 수 없고 literal로 값을 세팅할 수 있다. 
 + String은 literal로 표기가 가능하지만 primitive 자료형은 아니다.
 
-```
+```java
 boolean result = true;
 char capitalC = 'C';
 int i = 100000;
@@ -142,7 +142,7 @@ String a = new String("Happy Java");
     + int[] evens = {2,4,6,8};
     + String[] members={"a", "b", "c", "d"}; 
     + 배열의 길이는 고정되어 있다.
-    ```
+    ```java
     String[] members = new String[4];
     members[0] = "a";
     members[1] = "b";
@@ -150,12 +150,12 @@ String a = new String("Happy Java");
     members[3] = "d";
     ```
     + 배열의 값은 인덱싱을 이용하여 접근한다.
-     ```
+     ```java
     String[] members={"a", "b", "c", "d"}; 
     System.out.println(members[2]);
      ```
     + for문으로 배열값을 돌리는 경우 배열의 길이만큼 for문을 돌려야 한다.
-     ```
+     ```java
     String[] members = {"a", "b", "c", "d"};
     for (int i=0; i<members.length; i++) {
         System.out.println(members[i]);
@@ -164,7 +164,7 @@ String a = new String("Happy Java");
 * 리스트(List) 자료형: 배열과 유사한 자료형이다. 리스트는 배열과 달리 동적으로 요소를 추가할 수 있다. 
     + List 자료형은 인터페이스(Interface)이며, 이에 대해선 이후에 더 자세히 알아보도록 하자.
     + List를 이용한 자료형에는 ArrayLisr, LinkedList 등이 있다.
-     ```
+     ```java
     import java.util.ArrayList;
 
     public class ExList {
