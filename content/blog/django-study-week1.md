@@ -5,7 +5,8 @@ description: 블로그 홈 화면 및 메인 화면 구성하기
 slug: django-study-week1
 category: Back-End
 author: Seoyeon Lee
-datetime: 2021-11-26
+featured: Featured
+img: django.png
 
 ---
 

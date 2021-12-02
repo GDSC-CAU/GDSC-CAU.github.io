@@ -4,7 +4,8 @@ description: 문장 데이터 수집을 위해 필요한 Selenium 내용입니�
 slug: data-study-week_1-Selenium
 category: Data-Science
 author: Choi Geonwoo
-datetime: 2021-11-25
+featured: Featured
+img: selenium.png
 ---
 
 ## 0. Selenium을 알아보자
