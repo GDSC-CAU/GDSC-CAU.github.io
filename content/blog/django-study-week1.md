@@ -70,7 +70,7 @@ python manage.py startapp blogapp
 
 ![app 등록](/django-study-week1/01.PNG)
 
- + **INSTALLED_APPS**에 프로젝트에서 사용하는 앱을 등록
+  **INSTALLED_APPS**에 프로젝트에서 사용하는 앱을 등록
 
 
 #### templates 구성
@@ -79,7 +79,7 @@ python manage.py startapp blogapp
 
 ![templates 이동](/django-study-week1/02.PNG)
 
-**blogapp** 안에서 홈 화면을 띄울 것이므로 <u>**templates**</u>를 <u>**blogapp**</u>으로 옮김
+  **blogapp** 안에서 홈 화면을 띄울 것이므로 <u>**templates**</u>를 <u>**blogapp**</u>으로 옮김
 
 * html 문서 작성
 
@@ -147,7 +147,7 @@ python manage.py startapp blogapp
 
 ![static](/django-study-week1/05.PNG)
 
-**blogapp** 내에 **static** 디렉토리를 생성하여 부트스트랩 html의 css 파일을 관리
+  **blogapp** 내에 **static** 디렉토리를 생성하여 부트스트랩 html의 css 파일을 관리
 
 * settings.py 설정
 
@@ -289,7 +289,7 @@ python manage.py startapp blogapp
 
 ![admin-page](/django-study-week1/08.PNG)
 
-admin 페이지에서 블로그를 추가하였을 때, 블로그 객체가 생성된다면 성공!
+  admin 페이지에서 블로그를 추가하였을 때, 블로그 객체가 생성된다면 성공!
 
 
 #### forms.py
