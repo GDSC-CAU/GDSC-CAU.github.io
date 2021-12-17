@@ -21,7 +21,7 @@ img: django.png
 ### Django 소개
 
 * 파이썬 기반으로 작성된 오픈소스 웹 어플리케이션 프레임워크
-* 장고 공식 사이트 : 
+* 장고 공식 사이트 : [https://www.djangoproject.com] (https://www.djangoproject.com)
 * 장고의 목표 : 데이터베이스 기반 웹 사이트를 보다 편리하게 작성하는 것
 * 내장된 기능만을 이용하여 빠르게 웹 개발을 할 수 있다는 것이 장점
 * MVT 패턴을 따름
@@ -64,22 +64,22 @@ img: django.png
 python manage.py startapp blogapp
 ```
 
-<u>blogapp</u>이라는 이름의 앱 생성
+**blogapp**이라는 이름의 앱 생성
 
-* 생성한 <u>blogapp</u>을 장고가 인식하게 하기 위해서 <u>settings.py</u> 설정
+* 생성한 **blogapp**을 장고가 인식하게 하기 위해서 **settings.py** 설정
 
 ![app 등록](/django-study-week1/01.PNG)
 
- + <u>INSTALLED_APPS</u>에 프로젝트에서 사용하는 앱을 등록
+  **INSTALLED_APPS**에 프로젝트에서 사용하는 앱을 등록
 
 
 #### templates 구성
 
-* <u>templates</u>에서 홈 화면을 구성하기 위한 html 문서를 관리
+* **templates**에서 홈 화면을 구성하기 위한 html 문서를 관리
 
 ![templates 이동](/django-study-week1/02.PNG)
 
-<u>blogapp</u> 안에서 홈 화면을 띄울 것이므로 <u>**templates**</u>를 <u>**blogapp**</u>으로 옮김
+  **blogapp** 안에서 홈 화면을 띄울 것이므로 <u>**templates**</u>를 <u>**blogapp**</u>으로 옮김
 
 * html 문서 작성
 
@@ -94,7 +94,7 @@ python manage.py startapp blogapp
   </body>
   </html>
   ```
-  <u>index.html</u> 작성
+  **index.html** 작성
 
 
 #### views.py & urls.py
@@ -108,10 +108,10 @@ python manage.py startapp blogapp
     return render(request, 'index.html')
   ```
 
-  <u>render</u> 함수를 통해 요청을 <u>index.html</u> 문서로 리턴
+  **render** 함수를 통해 요청을 **index.html** 문서로 리턴
 
 * urls.py
-  + <u>view.py</u>에서 생성한 index 함수를 <u>urls.py</u>에서 연결
+  + **view.py**에서 생성한 index 함수를 **urls.py**에서 연결
 
   ```python
   urlpatterns = [
@@ -121,10 +121,10 @@ python manage.py startapp blogapp
   ```
 
   + path 함수
-    + 첫번째 인자 <u>''</u> : 내 블로그 홈페이지의 주소를 입력할 때 아무것도 입력하지 않음
-    즉, "http://www.myblog.com"으로 접속하면 내가 작성한 index.html 문서가 보임
-    + 두번째 인자 <u>blogapp.views.index</u> : 내가 생성한 index 함수를 적용시킴
-    + 세번째 인자 <u>name='index'</u> : 함수를 적용시키고 이름을 명명하면, 추후에 html 파일에서 이 이름으로 url 값을 불러올 수 있음
+    + 첫번째 인자 **''** : 내 블로그 홈페이지의 주소를 입력할 때 아무것도 입력하지 않음
+      즉, 'http://www.myblog.com'으로 접속하면 내가 작성한 index.html 문서가 보임
+    + 두번째 인자 **blogapp.views.index** : 내가 생성한 index 함수를 적용시킴
+    + 세번째 인자 **name='index'** : 함수를 적용시키고 이름을 명명하면, 추후에 html 파일에서 이 이름으로 url 값을 불러올 수 있음
 
 
 #### 부트스트랩 
@@ -133,7 +133,7 @@ python manage.py startapp blogapp
 * 하나의 css로 휴대폰, 태블릿, 데스크탑까지 다양한 기기에서 작동함
 * 즉, 부트스트랩을 이용해 예쁜 페이지를 쉽게 구성할 수 있음
 
-* [부트스트랩](https://getbootstrap.com/)의 <u>examples</u>를 활용하여 페이지 구성
+* [부트스트랩](https://getbootstrap.com/)의 **examples**를 활용하여 페이지 구성
 
 
 #### 정적 파일
@@ -145,9 +145,9 @@ python manage.py startapp blogapp
   + media 파일은 사용자가 업로드하는 파일
   + 개발 단계에서 관리할 수 없으므로 따로 분류하여 관리
 
-![static]](/django-study-week1/05.PNG)
+![static](/django-study-week1/05.PNG)
 
-<u>blogapp</u> 내에 <u>static</u> 디렉토리를 생성하여 부트스트랩 html의 css 파일을 관리
+  **blogapp** 내에 **static** 디렉토리를 생성하여 부트스트랩 html의 css 파일을 관리
 
 * settings.py 설정
 
@@ -159,19 +159,19 @@ python manage.py startapp blogapp
   STATIC_ROOT = os.path.join(BASE_DIR, 'static')
   ```
 
-  <u>settings.py</u> 맨 아래 라인에 위의 코드를 입력하여 정적 파일의 위치를 지정
+  **settings.py** 맨 아래 라인에 위의 코드를 입력하여 정적 파일의 위치를 지정
 
-```
-python manage.py collectstatic
-```
+  ```
+  python manage.py collectstatic
+  ```
 
-터미널에서 정적 파일들을 한 곳으로 모아주는 명령어 입력
+  터미널에서 정적 파일들을 한 곳으로 모아주는 명령어 입력
 
 * index.html 수정
 
-  ![index.html]](/django-study-week1/06.PNG)
+  ![index.html](/django-study-week1/06.PNG)
 
-  부트스트랩 html의 코드를 복사하여 장고 프로젝트의 <u>index.html</u>에 붙여넣기
+  부트스트랩 html의 코드를 복사하여 장고 프로젝트의 **index.html**에 붙여넣기
 
 
 #### 장고 템플릿(template) 언어
@@ -212,10 +212,10 @@ python manage.py collectstatic
 
 * 블로그 홈 화면 구성과 동일한 방식
 
-![navbar-template]](/django-study-week1/07.PNG)
+![navbar-template](/django-study-week1/07.PNG)
 
-* <u>template</u> 폴더에서 <u>blogMain.html</u> 문서를 생성한 후, 부트스트랩의 html 코드를 복사하여 붙여넣기
-* 부트스트랩의 css 파일을 복사하여 <u>static</u> - <u>css</u>에 붙여넣기
+* **template** 폴더에서 **blogMain.html** 문서를 생성한 후, 부트스트랩의 html 코드를 복사하여 붙여넣기
+* 부트스트랩의 css 파일을 복사하여 **static** - **css**에 붙여넣기
 * 'python manage.py collectstatic'를 입력하여 정적 파일을 한 곳으로 모음
 
 
@@ -246,7 +246,7 @@ python manage.py collectstatic
 * 블로그에서 글을 작성하면 그 내용들이 서버에 저장되어야 하고, 저장된 데이터들이 다시 블로그 안에서 보여야 함
 * 데이터들을 서버에 저장하기 위해 데이터베이스 이용
 
-* <u>글쓰기</u> 항목의 모델 설계
+* **글쓰기** 항목의 모델 설계
   
   ```python
   from django.db import models
@@ -257,7 +257,7 @@ python manage.py collectstatic
     body = models.TextField()
   ```
 
-  <u>models.py</u> 파일에 위의 코드를 작성하여 간단한 글쓰기 모델 설계
+  **models.py** 파일에 위의 코드를 작성하여 간단한 글쓰기 모델 설계
 
 * 모델 데이터베이스 적용
   
@@ -273,7 +273,7 @@ python manage.py collectstatic
 
 * admin 페이지에서 설계한 모델이 데이터베이스에 적용되었는지 확인 가능
 * 서버를 실행시킨 후, [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin)으로 접속
-* <u>Tools</u> - <u>Run manage.py Task</u>에서 <u>createsuperuser</u>를 입력하여 관리자 계정 생성
+* **Tools** - **Run manage.py Task**에서 **createsuperuser**를 입력하여 관리자 계정 생성
 
 * admin 페이지에 블로그 모델 등록
 
@@ -285,18 +285,18 @@ python manage.py collectstatic
   admin.site.register(Blog)
   ```
 
-  <u>admin.py</u> 파일에 블로그 모델 등록
+  **admin.py** 파일에 블로그 모델 등록
 
-![admin-page]](/django-study-week1/08.PNG)
+![admin-page](/django-study-week1/08.PNG)
 
-admin 페이지에서 블로그를 추가하였을 때, 블로그 객체가 생성된다면 성공!
+  admin 페이지에서 블로그를 추가하였을 때, 블로그 객체가 생성된다면 성공!
 
 
 #### forms.py
 
-* <u>글쓰기</u>에 사용할 폼 생성
+* **글쓰기**에 사용할 폼 생성
 * 데이터베이스 모델에서 title, pub_date, body 항목을 가져오는 작업을 수행하기 위함
-* <u>blogapp</u> 디렉토리 내에 <u>admin.py</u> 생성
+* **blogapp** 디렉토리 내에 **admin.py** 생성
   
   ```python
   from django import forms
@@ -310,10 +310,10 @@ admin 페이지에서 블로그를 추가하였을 때, 블로그 객체가 생�
   ```
 
   + 장고에서 Meta 클래스는 내부 클래스로 활용되며, 기본 필드 값을 재정의할 때 사용
-  + <u>blog</u>로부터 모델을 가져오고, 그 중 'title', 'pub_date', 'body' 항목을 가져온다는 의미
+  + **blog**로부터 모델을 가져오고, 그 중 'title', 'pub_date', 'body' 항목을 가져온다는 의미
 
-* <u>글쓰기</u>에 사용되는 폼을 띄워줄 템플릿 생성
-  + <u>blogapp</u> - <u>templates</u>에 <u>createBlog.html</u> 작성
+* **글쓰기**에 사용되는 폼을 띄워줄 템플릿 생성
+  + **blogapp** - **templates**에 **createBlog.html** 작성
   
   + views.py
 
@@ -325,10 +325,10 @@ admin 페이지에서 블로그를 추가하였을 때, 블로그 객체가 생�
    
         return render(request, 'createBlog.html', {'form': form})
     ```
-      + 불러들인 폼을 <u>createBlog.html</u>로 보내기 위해 <u>form</u> 객체를 생성
+      + 불러들인 폼을 **createBlog.html**로 보내기 위해 **form** 객체를 생성
       + render(request, '템플릿', context) 형식
-        + <u>context</u>는 딕셔너리 자료형의 형태
-        + <u>createBlog.html</u> 문서에 딕셔너리 자료형을 보내게 되고, <u>createBlog.html</u>에서는 장고 템플릿 변수를 이용하여 값을 출력
+        + **context**는 딕셔너리 자료형의 형태
+        + **createBlog.html** 문서에 딕셔너리 자료형을 보내게 되고, **createBlog.html**에서는 장고 템플릿 변수를 이용하여 값을 출력
 
 
   + urls.py
@@ -346,7 +346,7 @@ admin 페이지에서 블로그를 추가하였을 때, 블로그 객체가 생�
 
 #### 템플릿-DB 연동
 
-* 사용자들이 입력한 데이터를 전송하기 위해 <u>createBlog.html</u>에 데이터 전달 폼 구축
+* 사용자들이 입력한 데이터를 전송하기 위해 **createBlog.html**에 데이터 전달 폼 구축
 
   ```python
   <form method="POST">
@@ -357,7 +357,7 @@ admin 페이지에서 블로그를 추가하였을 때, 블로그 객체가 생�
 
   'POST' 방식으로 폼 안의 데이터가 전달되고, 데이터를 제출하기 위해 'submit' 타입 사용
 
-* <u>views.py</u> 파일 내의 <u>createBlog()</u> 함수 수정
+* **views.py** 파일 내의 **createBlog()** 함수 수정
   
   ```python
   from django.shortcuts import render, redirect
@@ -378,12 +378,12 @@ admin 페이지에서 블로그를 추가하였을 때, 블로그 객체가 생�
   ```
 
   + redirect() 함수는 render() 함수와 유사하나 템플릿에 값을 전달하는 것이 아닌 단순히 특정 url 혹은 프로젝트 내의 문서로 이동시키고자 할 때 사용
-  1. <u>createBlog.html</u>에서 <u>저장</u>을 누르면 데이터들이 POST 방식으로 넘어옴
-  1. <u>CreateBlog()</u> 폼에 값을 전달한 상태로 <u>form</u> 객체 생성
-  1. 데이터들이 올바른 형식이면(form.is_valid()), 데이터베이스에 저장(form.save())
-  1. 그 후에 블로그 메인 화면으로 이동(redirect('blogMain'))
+    1. **createBlog.html**에서 **저장**을 누르면 데이터들이 POST 방식으로 넘어옴
+    1. **CreateBlog()** 폼에 값을 전달한 상태로 **form** 객체 생성
+    1. 데이터들이 올바른 형식이면(form.is_valid()), 데이터베이스에 저장(form.save())
+    1. 그 후에 블로그 메인 화면으로 이동(redirect('blogMain'))
 
-* POST 데이터 전달 과정에서 보안을 위해 <u>createBlog.html</u> 파일에 '{% csrf_token %}' 추가
+* POST 데이터 전달 과정에서 보안을 위해 **createBlog.html** 파일에 '{% csrf_token %}' 추가
 
 
 #### 템플릿 상속
@@ -391,11 +391,11 @@ admin 페이지에서 블로그를 추가하였을 때, 블로그 객체가 생�
 * html 문서 중 기본 뼈대가 되는 문서를 기본 템플릿으로 정하고, 다른 문서에서 기본 템플릿의 코드가 필요하면 상속하여 가져다 씀
 * 'base.hteml'로 설정
 
-* navbar의 내용을 상속받도록 <u>blogMain.html</u>의 코드를 <u>base.html</u>에 붙여넣기
+* navbar의 내용을 상속받도록 **blogMain.html**의 코드를 **base.html**에 붙여넣기
 
-* 기본 템플릿의 위치가 변경되었으므로 <u>settings.py</u>의 <u>TEMPLATES</u> 수정
+* 기본 템플릿의 위치가 변경되었으므로 **settings.py**의 **TEMPLATES** 수정
 
-* <u>blogMain.html</u>에서 아래 내용 추가
+* **blogMain.html**에서 아래 내용 추가
   
   ```python
   {% extends 'base.html' %}
@@ -405,10 +405,10 @@ admin 페이지에서 블로그를 추가하였을 때, 블로그 객체가 생�
   {% endblock %}
   ```
 
-  + 'extends ~'는 <u>base.html</u>을 상속받는다는 의미
-  + 'block ~'과 'endblock ~' 사이에는 <u>blogMain.html</u>만의 내용을 나타내는 코드 작성
+  + 'extends ~'는 **base.html**을 상속받는다는 의미
+  + 'block ~'과 'endblock ~' 사이에는 **blogMain.html**만의 내용을 나타내는 코드 작성
   
-* 위와 같은 방식으로 <u>createBlog.html</u> 파일 수정
+* 위와 같은 방식으로 **createBlog.html** 파일 수정
 
 
 #### 모델 재설계
@@ -419,7 +419,7 @@ admin 페이지에서 블로그를 추가하였을 때, 블로그 객체가 생�
   1. 작성자
   1. 내용 - 글자의 색깔, 폰트, 크기 등을 변경하고, 이미지 파일을 업로드
 
-* 위의 내용에 맞게 <u>models.py</u>와 <u>forms.py</u> 수정
+* 위의 내용에 맞게 **models.py**와 **forms.py** 수정
 
 
 #### CKEditor
@@ -435,17 +435,17 @@ admin 페이지에서 블로그를 추가하였을 때, 블로그 객체가 생�
 
   터미널에 위의 명령어를 입력하여 CKEditor 설치
 
-* <u>settings.py</u> 파일 내의 <u>INSTALLED_APPS</u>에 'ckeditor', 'ckeditor_uploader' 등록
+* **settings.py** 파일 내의 **INSTALLED_APPS**에 'ckeditor', 'ckeditor_uploader' 등록
 
-* 사용자들이 업로드하는 파일을 관리하기 위해 <u>settings.py</u>에 'media' 루트 설정
+* 사용자들이 업로드하는 파일을 관리하기 위해 **settings.py**에 'media' 루트 설정
   
   ```python
   MEDIA_URL = '/media/'
   MEDIA_ROOT = 'media/'
   ```
-  <u>settings.py</u> 맨 아래에 위의 코드 추가
+  **settings.py** 맨 아래에 위의 코드 추가
 
-* <u>urls.py</u> 수정
+* **urls.py** 수정
   
   ```python
   from django.conf.urls import include
@@ -464,7 +464,7 @@ admin 페이지에서 블로그를 추가하였을 때, 블로그 객체가 생�
 
   MEDIA 경로를 참조하기 위해 위의 문장 추가
 
-* <u>bloggapp</u> - <u>models.py</u> 수정
+* **bloggapp** - **models.py** 수정
 
   ```python
   from ckeditor.fields import RichTextField
@@ -479,12 +479,12 @@ admin 페이지에서 블로그를 추가하였을 때, 블로그 객체가 생�
 #### 글쓰기 페이지 꾸미기
 
 * CKEditor 폼을 적용시켜 파일 업로딩 기능을 글쓰기 페이지에 적용
-* <u>forms.py</u>와 <u>createBlog.html</u> 파일 수정
+* **forms.py**와 **createBlog.html** 파일 수정
 
 
 #### 블로그 메인 화면 출력
 
-* <u>bloggapp</u> - <u>models.py</u>에서 <u>blogMain()</u> 함수 수정
+* **bloggapp** - **models.py**에서 **blogMain()** 함수 수정
 
   ```python
   from .models import Blog
@@ -496,9 +496,9 @@ admin 페이지에서 블로그를 추가하였을 때, 블로그 객체가 생�
   ```
 
   + 데이터베이스에 저장된 객체를 모두 가리키는 'blogs' 객체 생성
-  + 'blogs' 객체를 <u>blogMain.html</u>로 보냄
+  + 'blogs' 객체를 **blogMain.html**로 보냄
 
-*  <u>blogMain.html</u> 수정
+*  **blogMain.html** 수정
 
   ```python
   {% extends 'base.html' %}
@@ -532,4 +532,4 @@ admin 페이지에서 블로그를 추가하였을 때, 블로그 객체가 생�
   + 템플릿 변수를 이용하여 각 블로그 객체의 제목, 작성일, 작성자, 내용을 출력
 
 * 내용에 원하지 않는 태그가 섞여서 나오는 문제를 해결하기 위해 장고 템플릿 필터 'safe' 사용
-  + <u>blogMain.html</u>에 '{{ blog.body | safe }}' 추가  
+  + **blogMain.html**에 '{{ blog.body | safe }}' 추가  
