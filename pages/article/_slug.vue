@@ -1,15 +1,9 @@
 <template>
 <div class="w-full bg-gray-50">
     <div class="related max-w-5xl mx-auto pt-28 pb-12 md:pb-24 md:pt-44">
-        <SocialHead
-        :title="article.title"
-        :description="article.description"
-        :image="article.img"
-        />
 
         <div class="max-w-3xl mx-auto">
             <p class="text-base md:text-xl text-gray-400 text-center mb-2">
-                <!-- <nuxt-link class="hover:underline" :to='`${article.category}`'> -->
                 <nuxt-link :to="{path: `/${article.category}`}" replace class="hover:underline">
                     {{article.category}}
                 </nuxt-link>
@@ -17,8 +11,7 @@
             <p class="custom-text leading-snug md:leading-normal px-5 md:px-0 mb-2 text-2xl md:text-5xl text-center text-gray-800 title font-semibold">{{article.title}}</p>
             <p class="text-base md:text-xl text-gray-500 text-center mb-16">
                 {{formatDate(article.createdAt)}} · by
-                <span v-for="memberAuthor of member" :key="memberAuthor"> 
-                    <!-- <nuxt-link class="hover:underline" :to='`${memberAuthor.slug}`'> -->
+                <span v-for="memberAuthor of member" :key="memberAuthor">
                     <nuxt-link :to="{path: `/member/${memberAuthor.slug}`}" replace class="hover:underline">
                         {{memberAuthor.name}}
                     </nuxt-link>
@@ -79,22 +72,54 @@ export default {
     head() {
         return {
             title: this.article.title,
+            desciption: this.article.description,
             htmlAttrs: {
             lang: 'ko'
             },
             meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { hid: 'description', name: 'description', content: 'Tech Blog Run by GDSC CAU' },
-            { name: 'format-detection', content: 'telephone=no' }
+            {
+                hid: 't-type',
+                name: 'twitter:card',
+                content: 'summary_large_image'
+            },
+            {
+            hid: 'og-type',
+            property: 'og:type',
+            content: 'website'
+            },
+            {
+            hid: 'og:title',
+            property: 'og:title',
+            content: this.article.title
+            },
+            {
+            hid: 'og:description',
+            property: 'og:description',
+            content: this.article.description
+            },
+            {
+            hid: 'og:image',
+            property: 'og:image',
+            content: 'https://raw.githubusercontent.com/GDSC-CAU/GDSC-CAU.github.io/main/static/opengraph_image.png'
+            },
+            {
+            hid: 'og:image:secure_url',
+            property: 'og:image:secure_url',
+            content: 'https://raw.githubusercontent.com/GDSC-CAU/GDSC-CAU.github.io/main/static/opengraph_image.png'
+            },
+            {
+            hid: 'og:image:alt',
+            property: 'og:image:alt',
+            content: this.article.title
+            },
+            {
+            hid: 'og:url',
+            name: 'og:url',
+            content: `https://gdsc-cau.github.io/article/${this.$route.params.slug}`
+            },
             ],
-            link: [
-                {
-                hid: 'canonical',
-                rel: 'canonical',
-                href: `https://gdsc-cau.github.io/${this.$route.params.slug}`
-                }
-            ]
         }
     },
 

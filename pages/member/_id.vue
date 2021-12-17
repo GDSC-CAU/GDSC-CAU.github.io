@@ -58,24 +58,56 @@ export default {
     head() {
         return {
             title: this.member.name,
+            desciption: this.member.description,
             htmlAttrs: {
             lang: 'ko'
             },
             meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { hid: 'description', name: 'description', content: '중앙대학교 Google DSC 블로그입니다. 활동 관련 소식, 공부 내용 등을 주기적으로 업로드합니다.' },
-            { name: 'format-detection', content: 'telephone=no' }
+            {
+                hid: 't-type',
+                name: 'twitter:card',
+                content: 'summary_large_image'
+            },
+            {
+            hid: 'og-type',
+            property: 'og:type',
+            content: 'website'
+            },
+            {
+            hid: 'og:title',
+            property: 'og:title',
+            content: this.member.name
+            },
+            {
+            hid: 'og:description',
+            property: 'og:description',
+            content: this.member.description
+            },
+            {
+            hid: 'og:image',
+            property: 'og:image',
+            content: 'https://raw.githubusercontent.com/GDSC-CAU/GDSC-CAU.github.io/main/static/opengraph_image.png'
+            },
+            {
+            hid: 'og:image:secure_url',
+            property: 'og:image:secure_url',
+            content: 'https://raw.githubusercontent.com/GDSC-CAU/GDSC-CAU.github.io/main/static/opengraph_image.png'
+            },
+            {
+            hid: 'og:image:alt',
+            property: 'og:image:alt',
+            content: this.member.name
+            },
+            {
+            hid: 'og:url',
+            name: 'og:url',
+            content: `https://gdsc-cau.github.io/member/${this.$route.params.slug}`
+            },
             ],
-            link: [
-                {
-                hid: 'canonical',
-                rel: 'canonical',
-                href: `https://gdsc-cau.github.io/${this.$route.params.slug}`
-                }
-            ]
         }
-    }
+    },
 
 }
 </script>
