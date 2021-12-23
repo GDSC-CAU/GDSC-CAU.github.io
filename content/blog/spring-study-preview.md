@@ -1,11 +1,12 @@
 ---
 
-title: 스프링 스터디-preview
-description: 스프링 스터디와 1주차 스터디 이전의 내용에 대해 간단히 소개합니다.
+title: 스프링 부트 시작 & 테스트 코드 작성하기
+description: 스프링 부트 프로젝트 시작 및 테스트 코드 작성에 대해 소개합니다.
 slug: spring-study-preview
 category: Back-End
 author: IlGoo Yeo
-featured: none
+featured: Featured
+img: spring.png
 
 ---
 
