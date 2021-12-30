@@ -67,8 +67,8 @@ img: spring.png
 * application-oauth.properties
 
   ```java
-  spring.security.oauth2.client.registration.google.client-id=142557740672-3lla9fcnj3rv83rjtbue1m7pcrq4ugrr.apps.googleusercontent.com
-  spring.security.oauth2.client.registration.google.client-secret=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
+  spring.security.oauth2.client.registration.google.client-id=클라이언트 ID
+  spring.security.oauth2.client.registration.google.client-secret=클라이언트 보안 비밀
   spring.security.oauth2.client.registration.google.scope=profile, email
   ```
 
@@ -630,7 +630,7 @@ img: spring.png
   ```java
   # registration
   spring.security.oauth2.client.registration.naver.client-id=네이버클라이언트ID
-  spring.security.oauth2.client.registration.naver.client-secret=네이버클라이언트시크릿
+  spring.security.oauth2.client.registration.naver.client-secret=네이버클라이언트비밀
   spring.security.oauth2.client.registration.naver.redirect-uri={baseUrl}/{action}/oauth2/code/{registrationId}
   spring.security.oauth2.client.registration.naver.authorization-grant-type=authorization_code
   spring.security.oauth2.client.registration.naver.scope=name,email,profile_image
