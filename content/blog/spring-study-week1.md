@@ -5,8 +5,7 @@ description: Spring Data Jpa를 활용한 RDB 관리에 대해 소개합니다.
 slug: spring-study-week1
 category: Back-End
 author: IlGoo Yeo
-featured: Featured
-img: spring.png
+featured: none
 
 ---
 
