@@ -5,8 +5,7 @@ description: 서버 템플릿 엔진과 머스테치를 활용한 화면 구성�
 slug: spring-study-week2
 category: Back-End
 author: IlGoo Yeo
-featured: Featured
-img: spring.png
+featured: none
 
 ---
 
