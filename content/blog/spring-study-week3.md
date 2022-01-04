@@ -5,8 +5,7 @@ description: 스프링 시큐리티 2.0과 OAuth를 사용한 소셜 로그인 �
 slug: spring-study-week3
 category: Back-End
 author: IlGoo Yeo
-featured: Featured
-img: spring.png
+featured: none
 
 ---
 
