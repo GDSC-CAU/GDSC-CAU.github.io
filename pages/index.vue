@@ -88,7 +88,6 @@
 
     <div class="max-w-6xl grid grid-cols-1 colspan mt-5 md:mt-8 max-w-6xl mx-auto px-6">
         <div class="group" v-for="article of articles" :key="article">
-            <!-- <nuxt-link :to="{ name: 'slug', params: { slug: article.slug } }"> -->
             <nuxt-link :to='`article/${article.slug}`'>
                 <div class="article-inner flex justify-between items-center border-t py-5 md:py-8 border-gray-600">
                   <div class="pr-4">
@@ -127,20 +126,17 @@
 export default {
   async asyncData({ $content, params }) {
     const articles = await $content('blog', params.slug)
-      .only(['title', 'description', 'img', 'datetime', 'category', 'author', 'slug'])
       .sortBy('createdAt', 'desc')
       .limit(5)
       .fetch();
     const featured = await $content('blog', params.slug)
       .where({featured: 'Featured'})
-      .only(['title', 'description', 'img', 'datetime', 'category', 'author', 'slug'])
-      .sortBy('updatedAt', 'desc')
+      .sortBy('createdAt', 'desc')
       .limit(3)
       .fetch();
     const featuredone = await $content('blog', params.slug)
       .where({featured: 'Featured'})
-      .only(['title', 'description', 'img', 'datetime', 'category', 'author', 'slug'])
-      .sortBy('updatedAt', 'desc')
+      .sortBy('createdAt', 'desc')
       .limit(1)
       .fetch();
     return {

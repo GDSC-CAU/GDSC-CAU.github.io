@@ -1,6 +1,6 @@
 ---
 
-title: 스프링 스터디-1주차
+title: 스프링 부트에서 JPA로 데이터베이스 다뤄보기
 description: Spring Data Jpa를 활용한 RDB 관리에 대해 소개합니다.
 slug: spring-study-week1
 category: Back-End
@@ -410,9 +410,9 @@ public class Posts
       private final PostsService postsService;
   
       @PostMapping("/api/v1/posts")
-      public Long save(@RequestBody PostsSaveRequestDto reqeustDto)
+      public Long save(@RequestBody PostsSaveRequestDto requestDto)
       {
-          return postsService.save(reqeustDto);
+          return postsService.save(requestDto);
       }
   }
   ```
@@ -764,8 +764,11 @@ public class Posts
 * application.properties
 
   ```java
-  // 기존 코드
-  spring.datasource.url=jdbc:h2:mem:testdb
+  // 다음과 같이 수정
+  spring.jpa.show-sql=true
+  spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL57Dialect
+  spring.jpa.properties.hibernate.dialect.storage_engine=innodb
+  spring.datasource.hikari.jdbc-url=jdbc:h2:mem://localhost/~/testdb;MODE=MYSQL
   spring.h2.console.enabled=true
   ```
 

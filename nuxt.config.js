@@ -2,7 +2,10 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
-  // Global page headers: https://go.nuxtjs.dev/config-head
+  googleAnalytics: {
+    id: 'G-78SE6PS7BD'
+  },
+
   head: {
     title: 'GDSC CAU',
     htmlAttrs: {
@@ -11,40 +14,15 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '중앙대학교 Google DSC 블로그입니다. 활동 관련 소식, 공부 내용 등을 주기적으로 업로드합니다.' },
+      { hid: 'description', name: 'description', content: '중앙대학교 Google DSC 블로그입니다.' },
       { name: 'format-detection', content: 'telephone=no' },
-      // Twitter
-      // Test on: https://cards-dev.twitter.com/validator
+
       {
-        hid: 'twitter:card',
+        hid: 't-type',
         name: 'twitter:card',
         content: 'summary_large_image'
       },
-      { hid: 'twitter:site', name: 'twitter:site', content: '@googledevs' },
-      {
-        hid: 'twitter:url',
-        name: 'twitter:url',
-        content: 'https://gdsc-cau.github.io/'
-      },
-      {
-        hid: 'twitter:title',
-        name: 'twitter:title',
-        content: 'GDSC CAU'
-      },
-      {
-        hid: 'twitter:description',
-        name: 'twitter:description',
-        content:
-          '중앙대학교 Google DSC 블로그입니다. 활동 관련 소식, 공부 내용 등을 주기적으로 업로드합니다.'
-      },
-      {
-        hid: 'twitter:image',
-        name: 'twitter:image',
-        content: 'https://gdsc-cau.github.io/opengraph_image.png'
-      },
 
-      // Open Graph
-      // Test on: https://developers.facebook.com/tools/debug/
       { hid: 'og:site_name', property: 'og:site_name', content: 'GDSC CAU' },
       { hid: 'og:type', property: 'og:type', content: 'Blog' },
       {
@@ -61,52 +39,26 @@ export default {
         hid: 'og:description',
         property: 'og:description',
         content:
-          '중앙대학교 Google DSC 블로그입니다. 활동 관련 소식, 공부 내용 등을 주기적으로 업로드합니다.'
+          '중앙대학교 Google DSC 블로그입니다.'
       },
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://gdsc-cau.github.io/opengraph_image.png'
+        content: 'https://raw.githubusercontent.com/GDSC-CAU/GDSC-CAU.github.io/main/static/opengraph_image.png'
       },
       {
         hid: 'og:image:secure_url',
         property: 'og:image:secure_url',
-        content: 'https://gdsc-cau.github.io/opengraph_image.png'
+        content: 'https://raw.githubusercontent.com/GDSC-CAU/GDSC-CAU.github.io/main/static/opengraph_image.png'
       },
       {
         hid: 'og:image:alt',
         property: 'og:image:alt',
-        content: 'Google Student Clubs Logo Image'
+        content: 'GDSC Logo Image'
       }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        hid: 'canonical',
-        rel: 'canonical',
-        href: `https://gdsc-cau.github.io`
-      }
-    ]
-  },
-
-  googleAnalytics: {
-    id: 'G-78SE6PS7BD'
-  },
-
-  // Global page headers: https://go.nuxtjs.dev/config-head
-  head: {
-    title: 'GDSC CAU',
-    htmlAttrs: {
-      lang: 'en'
-    },
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
     ]
   },
 
@@ -141,7 +93,7 @@ export default {
   modules: [
 
     //https://github.com/dword-design/nuxt-content-git
-    // 'nuxt-content-git',
+    'nuxt-content-git',
 
     // https://go.nuxtjs.dev/content
     '@nuxt/content',

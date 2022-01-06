@@ -34,7 +34,7 @@ export default {
 
       this.articles = await this.$content('blog')
         .only(['title', 'slug'])
-        .sortBy('createdAt', 'asc')
+        .sortBy('createdAt', 'desc')
         .limit(15)
         .search(query)
         .fetch()
