@@ -4,7 +4,7 @@ description: NLP에서 사용하는 라이브러리와 토큰화란 무엇인지
 slug: data-study-week-3-NLP_tutorial
 category: Data-Science
 author: Choi Geonwoo
-featured: Featured
+featured: none
 ---
 
 
