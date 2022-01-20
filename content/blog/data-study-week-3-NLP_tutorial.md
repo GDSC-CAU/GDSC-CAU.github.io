@@ -1,5 +1,5 @@
 ---
-title: NLP 프레임워크와 토큰화
+title: NLP 프레임워크와 토큰화, 텍스트 전처리(1)
 description: NLP에서 사용하는 라이브러리와 토큰화란 무엇인지에 대한 내용입니다.
 slug: data-study-week-3-NLP_tutorial
 category: Data-Science
