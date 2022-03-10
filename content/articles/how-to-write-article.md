@@ -13,13 +13,13 @@ featured: Featured
 >  아티클 작성 방법과 작성 시 지켜야할 규칙에 대해 안내 드립니다.
 
 
-## 1. 확장명은 md이며, ~/content/blog 디렉토리 내에 위치합니다.
+## 1. 확장명은 md이며, ~/content/articles 디렉토리 내에 위치합니다.
 
 - 아티클의 확장명은 md(마크다운)입니다. 
 
 - 파일명은 아티클 slug 속성값과 동일해야 합니다. 관련 내용은 3번에서 설명 드립니다. 
 
-- 파일은 ~/content/blog 디렉토리 내에 위치해야 합니다. 아래는 GDSC-CAU.github.io 레포지토리의 구조입니다. 이 중 content 폴더로 이동 후, 그 안의 blog 폴더 안에 들어가 md 파일을 생성하시면 됩니다.
+- 파일은 ~/content/articles 디렉토리 내에 위치해야 합니다. 아래는 GDSC-CAU.github.io 레포지토리의 구조입니다. 이 중 content 폴더로 이동 후, 그 안의 articles 폴더 안에 들어가 md 파일을 생성하시면 됩니다.
 
   ![레포지토리 구조](/how-to-write-article/01.png)
 
