@@ -4,7 +4,7 @@
 
         <div class="max-w-3xl mx-auto">
             <p class="text-base md:text-xl text-gray-400 text-center mb-2">
-                <nuxt-link :to="{path: `/${article.category}`}" replace class="hover:underline">
+                <nuxt-link :to="{path: `/${article.category}`}" class="hover:underline">
                     {{article.category}}
                 </nuxt-link>
             </p>
@@ -12,7 +12,7 @@
             <p class="text-base md:text-xl text-gray-500 text-center mb-16">
                 {{formatDate(article.createdAt)}} · by
                 <span v-for="memberAuthor of member" :key="memberAuthor">
-                    <nuxt-link :to="{path: `/member/${memberAuthor.slug}`}" replace class="hover:underline">
+                    <nuxt-link :to="{path: `/members/${memberAuthor.slug}`}" class="hover:underline">
                         {{memberAuthor.name}}
                     </nuxt-link>
                 </span>
@@ -29,7 +29,7 @@
                 <div class="text-gray-800 text-xl md:text-2xl pb-2 md:pb-3.5 font-medium flex justify-center poppins">{{memberAuthor.name}}</div>
                 <div class="text-gray-500 text-sm md:text-base pb-3 md:pb-4 flex justify-center px-3 text-center custom-text">{{memberAuthor.description}}</div>
                 <div class="flex justify-center itmes-center">
-                    <nuxt-link class="poppins text-blue-500 text-base md:text-lg hover:underline" :to="{path: `/member/${memberAuthor.slug}`}" replace>
+                    <nuxt-link class="poppins text-blue-500 text-base md:text-lg hover:underline" :to="{path: `/members/${memberAuthor.slug}`}">
                         See More
                     </nuxt-link>
                 </div>
@@ -45,10 +45,10 @@
 <script>
 export default {
     async asyncData({ $content, params }) {
-        const article = await $content('blog', params.slug)
+        const article = await $content('articles', params.slug)
         .fetch();
 
-        const [prev, next] = await $content('blog')
+        const [prev, next] = await $content('articles')
         .only(['title', 'slug'])
         .sortBy('createdAt', 'asc')
         .surround(params.slug)
@@ -56,7 +56,7 @@ export default {
 
         const authorName = article.author
 
-        const member = await $content('members', params.id)
+        const member = await $content('members')
         .where({name: authorName})
         .fetch();
 

@@ -8,7 +8,7 @@
 
         <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-5 gap-x-3 md:gap-x-5 gap-y-9 pb-20 md:pb-24">
             <div v-for="imember of member" :key="imember">
-                <nuxt-link :to='`member/${imember.slug}`' class="group">
+                <nuxt-link :to='`/members/${imember.slug}`' class="group">
                     <div class="flex justify-center mb-3 md:mb-5">
                         <div class="lead-box h-32 w-32 md:h-40 md:w-40">
                             <img class="profile" :src="require(`~/assets/resources/profile/${imember.img}`)" alt="">
@@ -26,8 +26,8 @@
 
 <script>
 export default {
-    async asyncData({ $content, params }) {
-        const member = await $content('members', params.id)
+    async asyncData({ $content }) {
+        const member = await $content('members')
         .sortBy('name', 'asc')
         .fetch();
         return { member }

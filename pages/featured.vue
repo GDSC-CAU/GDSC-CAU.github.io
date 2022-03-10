@@ -11,7 +11,7 @@
 
         <div class="max-w-6xl grid grid-cols-1 colspan mt-5 md:mt-8 pb-14 md:pb-24 max-w-6xl mx-auto px-6">
             <div class="group" v-for="ftarticle of featured" :key="ftarticle">
-                <nuxt-link :to='`article/${ftarticle.slug}`'>
+                <nuxt-link :to='`/articles/${article.slug}`'>
                     <div class="article-inner flex justify-between items-center border-t py-5 md:py-8 border-gray-600">
                     <div class="pr-4">
                         <p class="mb-1 md:mb-1.5 text-sm md:text-sm text-gray-400">{{ftarticle.category}} · {{ftarticle.author}}</p>
@@ -31,8 +31,8 @@
 
 <script>
 export default {
-  async asyncData({ $content, params }) {
-    const featured = await $content('blog', params.slug)
+  async asyncData({ $content }) {
+    const featured = await $content('articles')
       .where({featured: 'Featured'})
       .sortBy('createdAt', 'desc')
       .fetch();

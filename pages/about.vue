@@ -17,7 +17,7 @@
                     <p class="text-5xl poppins pb-2.5 font-medium text-gray-800">20</p>
                     <p class="text-xl poppins text-gray-800">Active Members</p>
                 </div>
-                <nuxt-link class="absolute bottom-0 left-0 pb-8 pl-8" to="members">
+                <nuxt-link class="absolute bottom-0 left-0 pb-8 pl-8" to="/members">
                     <div class="poppins text-base md:text-lg text-gray-800 underline">
                         See Members
                     </div>
@@ -29,7 +29,7 @@
                     <p class="text-5xl poppins pb-2.5 font-medium text-gray-800">20</p>
                     <p class="text-xl poppins text-gray-800">Individual Projects <br> in Process</p>
                 </div>
-                <nuxt-link class="absolute bottom-0 left-0 pb-8 pl-8" to="projects">
+                <nuxt-link class="absolute bottom-0 left-0 pb-8 pl-8" to="/projects">
                     <div class=" poppins text-base md:text-lg text-gray-800 underline">
                         See Projects
                     </div>
@@ -45,7 +45,7 @@
         <div class="pt-12 md:pt-16 max-w-6xl mx-auto px-10">
             <div class="">
                 <div v-for="leadm of Lead" :key="leadm">
-                    <nuxt-link :to='`member/${leadm.slug}`' class="max-x-3xl mx-auto md:flex md:justify-between md:items-center group">
+                    <nuxt-link :to='`/member/${leadm.slug}`' class="max-x-3xl mx-auto md:flex md:justify-between md:items-center group">
                         <div class="flex justify-center">
                             <div class="lead-box w-40 h-40 md:w-52 md:h-52">
                                 <img class="profile" :src="require(`~/assets/resources/profile/${leadm.img}`)" alt="">
@@ -71,7 +71,7 @@
 
         <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-5 gap-x-3 md:gap-x-5 gap-y-9 pb-20 md:pb-24">
             <div v-for="imember of coreMember" :key="imember">
-                <nuxt-link :to='`member/${imember.slug}`' class="group">
+                <nuxt-link :to='`/member/${imember.slug}`' class="group">
                     <div class="flex justify-center mb-3 md:mb-5">
                         <div class="lead-box h-32 w-32 md:h-40 md:w-40">
                             <img class="profile" :src="require(`~/assets/resources/profile/${imember.img}`)" alt="">
@@ -92,11 +92,11 @@
 
 <script>
 export default {
-    async asyncData({ $content, params }) {
-        const Lead = await $content('members', params.id)
+    async asyncData({ $content }) {
+        const Lead = await $content('members')
         .where({role:'Lead'})
         .fetch();
-        const coreMember = await $content('members', params.id)
+        const coreMember = await $content('members')
         .sortBy('name', 'asc')
         .where({role:'Core Member'})
         .fetch();

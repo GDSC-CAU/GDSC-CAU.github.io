@@ -1,12 +1,6 @@
 <template>
     <div class="w-full bg-gray-50">
 
-        <SocialHead
-        :title="member.name"
-        :description="member.description"
-        :image="member.img"
-        />
-
         <div class="max-w-6xl mx-auto px-6 flex justify-center pt-28 md:pt-40">
             <div>
                 <div class="lead-box w-40 h-40 md:w-52 md:h-52 mb-4 md:mb-6 mx-auto">
@@ -19,12 +13,33 @@
         </div>
 
         <div class="pt-8 md:pt-16 flex justify-between items-center max-w-6xl mx-auto px-6">
+            <div class="text-2xl md:text-3xl text-gray-800 font-medium poppins">Projects</div>
+        </div>
+
+        <div class="max-w-6xl grid grid-cols-1 colspan mt-5 md:mt-8 pb-8 md:pb-12 max-w-6xl mx-auto px-6">
+            <div class="group" v-for="marticle of proArticles" :key="marticle">
+                <nuxt-link :to="{path: `/articles/${marticle.slug}`}">
+                    <div class="article-inner flex justify-between items-center border-t py-5 md:py-8 border-gray-600">
+                        <div class="pr-4">
+                            <p class="mb-1 md:mb-1.5 text-sm md:text-sm text-gray-400">{{marticle.author}}</p>
+                            <h2 class="mb-1 md:mb-1.5 text-lg md:text-xl font-medium poppins text-gray-800">{{ marticle.title }}</h2>
+                            <p class=" text-sm md:text-base text-gray-600 custom-text">{{marticle.description}}</p>
+                        </div>
+                        <div class="pl-4 pr-6 hidden md:block">
+                            <ExternalLinkLogo class="fill-current text-gray-400 group-hover:text-gray-700 transition duration-200" />
+                        </div>
+                    </div>
+                </nuxt-link>
+            </div>
+        </div>
+
+        <div class="flex justify-between items-center max-w-6xl mx-auto px-6">
             <div class="text-2xl md:text-3xl text-gray-800 font-medium poppins">Articles</div>
         </div>
 
         <div class="max-w-6xl grid grid-cols-1 colspan mt-5 md:mt-8 pb-14 md:pb-24 max-w-6xl mx-auto px-6">
             <div class="group" v-for="marticle of memberArticles" :key="marticle">
-                <nuxt-link :to="{path: `/article/${marticle.slug}`}" replace>
+                <nuxt-link :to="{path: `/articles/${marticle.slug}`}">
                     <div class="article-inner flex justify-between items-center border-t py-5 md:py-8 border-gray-600">
                         <div class="pr-4">
                             <p class="mb-1 md:mb-1.5 text-sm md:text-sm text-gray-400">{{marticle.category}} · {{marticle.author}}</p>
@@ -45,14 +60,18 @@
 <script>
 export default {
     async asyncData({ $content, params }) {
-        const member = await $content('members', params.id)
+        const member = await $content('members', params.slug)
         .fetch();
         const authorName = member.name
-        const memberArticles = await $content('blog', params.slug)
+        const memberArticles = await $content('articles')
             .where({author: authorName})
             .sortBy('createdAt', 'desc')
             .fetch();
-        return { member, memberArticles, authorName }
+        const proArticles = await $content('projects')
+            .where({author: authorName})
+            .sortBy('createdAt', 'desc')
+            .fetch();
+        return { member, memberArticles, authorName, proArticles }
     },
 
     head() {
