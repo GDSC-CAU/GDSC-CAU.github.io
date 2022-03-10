@@ -109,14 +109,45 @@
         </div>
     </div>
 
+<!-- 최신 프로젝트 -->
+
+    <div class="mt-14 md:mt-24 mb-6 md:mb-10 flex justify-between items-center max-w-6xl mx-auto px-6">
+        <div class="text-3xl md:text-4xl text-gray-800 font-medium poppins">Latest Projects</div>
+        <nuxt-link to="/projects">
+          <div class="text-base text-blue-500 poppins hover:underline hidden md:block">See All Projects</div>
+        </nuxt-link>
+    </div>
+
+    <div class="max-w-6xl grid grid-cols-1 colspan mt-5 md:mt-8 max-w-6xl mx-auto px-6 pb-16 md:pb-28">
+        <div class="group" v-for="article of proArticles" :key="article">
+            <nuxt-link :to='`/projects/${article.slug}`'>
+                <div class="article-inner flex justify-between items-center border-t py-5 md:py-8 border-gray-600">
+                  <div class="pr-4">
+                      <p class="mb-1 md:mb-1.5 text-sm md:text-sm text-gray-400">{{article.author}}</p>
+                      <h2 class="mb-1 md:mb-1.5 text-lg md:text-xl font-medium poppins text-gray-800">{{ article.title }}</h2>
+                      <p class=" text-sm md:text-base text-gray-600 custom-text">{{article.description}}</p>
+                  </div>
+                  <div class="pl-4 pr-6 hidden md:block">
+                    <ExternalLinkLogo class="fill-current text-gray-400 group-hover:text-gray-700 transition duration-200" />
+                  </div>
+                </div>
+            </nuxt-link>
+        </div>
+
+        <div class="flex justify-center pt-1 block md:hidden">
+          <nuxt-link to="/projects" class="poppins text-blue-500 text-center text-sm">
+            See All Projects
+          </nuxt-link>
+        </div>
+    </div>
 
 <!-- 카테고리 -->
 
-    <div class="mt-10 md:mt-20 pb-7 md:pb-10 flex justify-between items-center max-w-6xl mx-auto px-6">
+    <!-- <div class="mt-10 md:mt-20 pb-7 md:pb-10 flex justify-between items-center max-w-6xl mx-auto px-6">
         <div class="text-3xl md:text-4xl text-gray-800 font-medium poppins">Categories</div>
     </div>
 
-    <Category />
+    <Category /> -->
 
   </div>
 </div>
@@ -126,6 +157,10 @@
 export default {
   async asyncData({ $content }) {
     const articles = await $content('articles')
+      .sortBy('createdAt', 'desc')
+      .limit(5)
+      .fetch();
+    const proArticles = await $content('projects')
       .sortBy('createdAt', 'desc')
       .limit(5)
       .fetch();
@@ -142,7 +177,8 @@ export default {
     return {
       articles,
       featured,
-      featuredone
+      featuredone,
+      proArticles
     }
   },
     methods: {
