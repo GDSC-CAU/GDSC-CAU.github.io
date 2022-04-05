@@ -13,7 +13,7 @@
                         <nuxt-link :to="{path: '/about'}" replace class="poppins">About</nuxt-link>
                     </li>
                     <li class="hidden md:block poppins text-gray-500 hover:text-gray-800 transition hover:duration-300 font-light">
-                        <nuxt-link :to="{path: '/all-articles'}" replace class="poppins">Articles</nuxt-link>
+                        <nuxt-link :to="{path: '/articles'}" replace class="poppins">Articles</nuxt-link>
                     </li>
                     <li class="hidden md:block poppins text-gray-500 hover:text-gray-800 transition hover:duration-300 font-light">
                         <nuxt-link :to="{path: '/categories'}" replace class="poppins">Categories</nuxt-link>
