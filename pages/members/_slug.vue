@@ -18,7 +18,7 @@
 
         <div class="max-w-6xl grid grid-cols-1 colspan mt-5 md:mt-8 pb-8 md:pb-12 max-w-6xl mx-auto px-6">
             <div class="group" v-for="marticle of proArticles" :key="marticle">
-                <nuxt-link :to="{path: `/articles/${marticle.slug}`}">
+                <nuxt-link :to="{path: `/projects/${marticle.slug}`}">
                     <div class="article-inner flex justify-between items-center border-t py-5 md:py-8 border-gray-600">
                         <div class="pr-4">
                             <p class="mb-1 md:mb-1.5 text-sm md:text-sm text-gray-400">{{marticle.author}}</p>
