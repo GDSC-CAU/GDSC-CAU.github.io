@@ -42,13 +42,13 @@
                             </a>
                         </div>
                     </li>
-                    <li>
+                    <!-- <li>
                         <div class="hidden md:block group pl-3">
                             <a href="https://gdsc-cau.notion.site/GDSC-CAU-Member-Space-a8f22210d95a4e439dfae3a45b04ceb2" target="blank">
                                 <NotionLogo />
                             </a>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
 

@@ -15,7 +15,7 @@
 
 <!-- 추천 아티클 (후에 carousel화?) -->
 
-    <div class="pt-14 md:pt-16 flex justify-between items-center max-w-6xl mx-auto px-6">
+    <!-- <div class="pt-14 md:pt-16 flex justify-between items-center max-w-6xl mx-auto px-6">
         <div class="hidden md:block text-4xl text-gray-800 font-medium poppins">Featured Articles</div>
         <div class="block md:hidden text-3xl text-gray-800 font-medium poppins">Featured Article</div>
         <nuxt-link to="featured">
@@ -27,7 +27,6 @@
     <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-6 md:gap-y-0 pt-10">
 
       <div v-for="ftarticle of featured" :key="ftarticle" class="nthz hidden md:block">
-        <!-- <nuxt-link :to="{ name: 'slug', params: { slug: ftarticle.slug } }"> -->
         <nuxt-link :to='`/articles/${ftarticle.slug}`'>
           <div class="h-72 md:h-96 custom-radius group">
             <div class="h-3/5 flex items-center justify-center">
@@ -45,7 +44,6 @@
       </div>
 
       <div v-for="featarticle of featuredone" :key="featarticle" class="block md:hidden">
-        <!-- <nuxt-link :to="{ name: 'slug', params: { slug: featarticle.slug } }"> -->
         <nuxt-link :to='`/articles/${featarticle.slug}`'>
           <div class="back-yellow rounded-lg h-52 py-5 px-6 relative">
             <div>
@@ -66,7 +64,7 @@
           </nuxt-link>
       </div>
 
-    </div>
+    </div> -->
 
 <!-- 검색  -->
 
@@ -158,7 +156,7 @@ export default {
   async asyncData({ $content }) {
     const articles = await $content('articles')
       .sortBy('createdAt', 'desc')
-      .limit(5)
+      .limit(10)
       .fetch();
     const proArticles = await $content('projects')
       .sortBy('createdAt', 'desc')

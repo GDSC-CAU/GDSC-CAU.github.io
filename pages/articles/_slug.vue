@@ -10,7 +10,8 @@
             </p>
             <p class="custom-text leading-snug md:leading-normal px-5 md:px-0 mb-2 text-2xl md:text-5xl text-center text-gray-800 title font-semibold">{{article.title}}</p>
             <p class="text-base md:text-xl text-gray-500 text-center mb-16">
-                {{formatDate(article.createdAt)}} · by
+                <!-- {{formatDate(article.createdAt)}}  -->
+                by
                 <span v-for="memberAuthor of member" :key="memberAuthor">
                     <nuxt-link :to="{path: `/members/${memberAuthor.slug}`}" class="hover:underline">
                         {{memberAuthor.name}}
