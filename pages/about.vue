@@ -8,16 +8,16 @@
 
         <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-6 md:gap-y-0">
 
-            <div class="custom-text poppins text-2xl md:text-3xl mr-9 py-2 md:py-6 text-gray-800">
+            <div class="custom-text poppins md:col-span-3 text-2xl md:text-3xl mr-9 py-2 md:py-6 text-gray-800">
                 Google Developer Student Clubs CAU is a community group for CAU students interested in Google developer technologies.
             </div>
 
             <div class="px-8 py-8 back-yellow rounded-xl relative h-52 md:h-auto">
                 <div>
-                    <p class="text-5xl poppins pb-2.5 font-medium text-gray-800">20</p>
+                    <p class="text-5xl poppins pb-2.5 font-medium text-gray-800">27</p>
                     <p class="text-xl poppins text-gray-800">Active Members</p>
                 </div>
-                <nuxt-link class="absolute bottom-0 left-0 pb-8 pl-8" to="/members">
+                <nuxt-link class="bottom-0 left-0 pb-8 pl-8" to="/members">
                     <div class="poppins text-base md:text-lg text-gray-800 underline">
                         See Members
                     </div>
@@ -26,12 +26,24 @@
 
             <div class="px-8 py-8 back-yellow rounded-xl relative h-56 md:h-auto">
                 <div>
-                    <p class="text-5xl poppins pb-2.5 font-medium text-gray-800">20</p>
-                    <p class="text-xl poppins text-gray-800">Individual Projects <br> in Process</p>
+                    <p class="text-5xl poppins pb-2.5 font-medium text-gray-800">2</p>
+                    <p class="text-xl poppins text-gray-800">Team Projects in Process</p>
                 </div>
-                <nuxt-link class="absolute bottom-0 left-0 pb-8 pl-8" to="/projects">
+                <nuxt-link class="bottom-0 left-0 pb-8 pl-8" to="/projects">
                     <div class=" poppins text-base md:text-lg text-gray-800 underline">
                         See Projects
+                    </div>
+                </nuxt-link>
+            </div>
+
+            <div class="px-8 py-8 back-yellow rounded-xl relative h-56 md:h-auto">
+                <div>
+                    <p class="text-5xl poppins pb-2.5 font-medium text-gray-800">4</p>
+                    <p class="text-xl poppins text-gray-800">Team Study in Process</p>
+                </div>
+                <nuxt-link class="bottom-0 left-0 pb-8 pl-8" to="/projects">
+                    <div class=" poppins text-base md:text-lg text-gray-800 underline">
+                        See Studies
                     </div>
                 </nuxt-link>
             </div>
