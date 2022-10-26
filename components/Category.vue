@@ -67,6 +67,19 @@
                 </nuxt-link>
             </div>
             <div class="border border-gray-600 h-40 sm:h-44 rounded-lg bg-white group">
+                <nuxt-link to="/cloud">
+                <div class="h-2/5 border-b border-gray-600 flex items-center">
+                <div class="text-2xl text-gray-800 poppins px-6">Cloud</div>
+                </div>
+                <div class="h-3/5 flex items-center">
+                <div class="px-6">
+                    <div class="text-gray-600 mb-3 ftmore">클라우드 서비스에 대한 글들이에요.</div>
+                    <div class="text-blue-500 text-sm poppins group-hover:underline">See More</div>
+                </div>
+                </div>
+                </nuxt-link>
+            </div>
+            <div class="border border-gray-600 h-40 sm:h-44 rounded-lg bg-white group">
                 <nuxt-link to="/general">
                 <div class="h-2/5 border-b border-gray-600 flex items-center">
                 <div class="text-2xl text-gray-800 poppins px-6">General</div>
