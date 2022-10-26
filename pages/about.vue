@@ -66,7 +66,7 @@
                         <div class="mx-auto pl-0 md:pl-12">
                             <div class="">
                                 <p class="pt-6 md:pt-0 custom-text text-center text-gray-600 text-base md:text-xl mb-4 md:mb-6">
-                                    "공부만을 위한 프로그래밍을 원하지 않습니다. 세상과 부딪히는 개발을 원합니다. <br> 그런 사람들과 함께하고자 중앙대학교 GDSC에서 모였습니다."
+                                    {{leadm.slogan}}
                                 </p>
                                 <div class="text-lg md:text-xl flex justify-center poppins text-gray-800 group-hover:underline">{{leadm.name}}</div>
                                 <div class="text-sm md:text-base flex justify-center poppins text-gray-800">{{leadm.role}}</div>
