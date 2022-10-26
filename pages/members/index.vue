@@ -21,6 +21,28 @@
                 </nuxt-link>
             </div>
         </div>
+
+        <div class="pt-28 md:pt-52 pb-0 md:pb-14 max-w-6xl mx-auto px-6">
+            <div class="pb-10 poppins text-3xl md:text-7xl font-medium text-gray-800">
+                Alumni
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-5 gap-x-3 md:gap-x-5 gap-y-9 pb-20 md:pb-24">
+            <div v-for="ialumni of alumni" :key="ialumni">
+                <nuxt-link :to='`/members/${ialumni.slug}`' class="group">
+                    <div class="flex justify-center mb-3 md:mb-5">
+                        <div class="lead-box h-32 w-32 md:h-40 md:w-40">
+                            <img class="profile" :src="require(`~/assets/resources/profile/${ialumni.img}`)" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-lg md:text-xl flex justify-center poppins text-gray-800 group-hover:underline">{{ialumni.name}}</div>
+                        <div class="text-sm md:text-base flex justify-center poppins text-gray-800">{{ialumni.role}}</div>
+                    </div>
+                </nuxt-link>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -28,9 +50,15 @@
 export default {
     async asyncData({ $content }) {
         const member = await $content('members')
+        .where({role: { $eq: 'Member'}})
         .sortBy('name', 'asc')
         .fetch();
-        return { member }
+
+        const alumni = await $content('members')
+        .where({role: {$contains: ["Alumni"]}})
+        .sortBy('name', 'asc')
+        .fetch();
+        return { member, alumni }
     },
 
     head: {
