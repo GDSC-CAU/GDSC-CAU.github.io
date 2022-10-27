@@ -1,1 +1,0 @@
-window.__NUXT__=(function(a){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1653239498",layout:"default",error:a,serverRendered:true,routePath:"\u002Farticles\u002Fdata-study-week2-scrapy",config:{googleAnalytics:{id:void 0},_app:{basePath:"\u002F",assetsPath:"\u002F_nuxt\u002F",cdnURL:a},content:{dbHash:"1985b8d4"}}}}(null));

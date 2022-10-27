@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/cloud", {data:[{articles:[]}],fetch:{},mutations:void 0});
