@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/members/jeongwon", (function(a,b){return {data:[{member:{slug:"jeongwon",name:a,description:"중앙대학교 소프트웨어학부 21학번",role:"Member",img:"jeongwon.jpg",dir:"\u002Fmembers",path:"\u002Fmembers\u002Fjeongwon",extension:".yaml",createdAt:b,updatedAt:b},memberArticles:[],authorName:a,proArticles:[]}],fetch:{},mutations:void 0}}("나정원","2022-11-01T05:35:27.000Z")));
