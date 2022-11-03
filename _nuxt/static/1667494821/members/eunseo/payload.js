@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/members/eunseo", (function(a,b){return {data:[{member:{slug:"eunseo",name:a,description:"steady study 📘",role:"Member",img:"eunseo.jpg",dir:"\u002Fmembers",path:"\u002Fmembers\u002Feunseo",extension:".yaml",createdAt:b,updatedAt:b},memberArticles:[],authorName:a,proArticles:[]}],fetch:{},mutations:void 0}}("Eunseo Ko","2022-10-27T12:04:48.000Z")));
