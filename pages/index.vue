@@ -13,7 +13,6 @@
       </div>
     </div>
 
-    
 <!-- 추천 아티클 (후에 carousel화?) -->
 
     <!-- <div class="pt-14 md:pt-16 flex justify-between items-center max-w-6xl mx-auto px-6">
