@@ -1,6 +1,6 @@
 ---
 title: AI스터디 - 챕터 1
-description: CH) The fundamentals of Machine Learning
+description: CH1) The fundamentals of Machine Learning
 slug: ai_ml-study-ch1
 category: Data-Science
 author: YuJin Son
