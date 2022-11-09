@@ -1,6 +1,6 @@
 ---
-title: AI스터디 - 챕터 1
-description: CH1) The fundamentals of Machine Learning
+title: 머신러닝에 대해서
+description: 머신러닝이 무엇인지, 왜 사용하는지, 종류, 해결과제 등 머신러닝의 전반적인 기초에 대한 내용입니다
 slug: ai_ml-study-ch1
 category: Data-Science
 author: YuJin Son

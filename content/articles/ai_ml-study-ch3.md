@@ -1,6 +1,6 @@
 ---
-title: AI스터디 - 챕터 3
-description: CH3) Classification
+title: MNIST로 보는 분류(Classification)
+description: MNIST dataset으로 보는 분류(Classification) 시스템을 구축하는 방법 
 slug: ai_ml-study-ch3
 category: Data-Science
 author: YuJin Son
