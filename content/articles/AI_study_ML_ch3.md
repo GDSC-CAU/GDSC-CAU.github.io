@@ -1,6 +1,6 @@
 ---
 title : ML ch3 - classification
-description : mnist 데이터셋을 이용해 숫자 클래스를 분류하는 방법
+description : mnist dataset을 이용해 숫자 클래스를 분류하는 방법
 slug: AI_study_ML_ch3
 category: Data-Science
 author: Jeongyoon Shin
