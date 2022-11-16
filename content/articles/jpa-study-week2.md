@@ -72,7 +72,7 @@ EntityManager em = emf.createEntityManager();
 - **엔티티 매니저**는 여러 스레드가 동시에 접근하면 **동시성 문제가 발생**하므로
   **스레드 간에 공유 불가**
 
-![그림 3.1](/jpa-study-week2/3_1.png)
+![일반적인 웹 어플리케이션](/jpa-study-week2/3_1.png)
 
 - 그림을 보면 EntityManagerFactory에서 다수의 엔티티 매니저를 생성했습니다.
 - EntityManager1은 **데이터베이스 연결이 꼭 필요한 시점까지 커넥션을 얻지 않습니다.**
@@ -110,13 +110,13 @@ JPA를 J2SE 환경에서 사용하면 해당 컨테이너가 제공하는 데이
 - 준영속(detached): 영속성 컨텍스트에 저장되었다가 분리된 상태
 - 삭제(removed): 삭제된 상태
 
-![그림 3.2](/jpa-study-week2/3_2.png)
+![생명주기](/jpa-study-week2/3_2.png)
 
 ### 비영속
 
 - 엔티티 객체를 생성 후 저장하지 않은 상태
 
-![그림 3.3](/jpa-study-week2/3_3.png)
+![em.persist() 호출 전, 비영속 상태](/jpa-study-week2/3_3.png)
 
 ### 영속
 
@@ -124,7 +124,7 @@ JPA를 J2SE 환경에서 사용하면 해당 컨테이너가 제공하는 데이
 - **영속성 컨텍스트에 의해 관리된다는 뜻**
 - em.find() 나 JPQL을 사용해서 조회한 엔티티도 영속 상태를 의미
 
-![그림 3.4](/jpa-study-week2/3_4.png)
+![em.persist() 호출 후, 영속 상태](/jpa-study-week2/3_4.png)
 
 ### 준영속
 
@@ -193,7 +193,7 @@ em.persist(member);
 
 위 코드를 실행하면 다음 그림과 같습니다.
 
-![그림 3.5](/jpa-study-week2/3_5.png)
+![영속성 컨텍스트 1차 캐시](/jpa-study-week2/3_5.png)
 
 - 1차 캐시에 회원 엔티티를 저장했지만 데이터베이스에 저장되지는 않았습니다.
 - **식별자 값**은 **데이터베이스 기본 키**와 매핑되어 있습니다.
@@ -208,7 +208,7 @@ Member member = em.find(Member.class, "member1");
 - `find(엔티티 클래스 타입, 조회할 식별자 값)` 메소드로 엔티티를 조회합니다.
 - 1차 캐시에 엔티티가 없으면 데이터베이스에서 조회합니다.
 
-![그림 3.6](/jpa-study-week2/3_6.png)
+![1차 캐시에서 조회](/jpa-study-week2/3_6.png)
 
 - 1차 캐시에 있는 엔티티 조회
 
@@ -229,7 +229,7 @@ Member findMember = em.find(Member.class, "member1");
 - 1차 캐시에 없으면 엔티티 매니저가 데이터베이스를 조회해서 엔티티 생성
   - 1차 캐시에 저장 후 영속 상태의 엔티티 반환
 
-![그림 3.7](/jpa-study-week2/3_7.png)
+![1차 캐시에 없어 데이터베이스 조회](/jpa-study-week2/3_7.png)
 
 ### 영속 엔티티의 동일성 보장
 
@@ -262,7 +262,7 @@ transaction.commit(); // [트랜잭션] 커밋
 
 ⇒ 이를 **쓰기 지연(transactional write-behind)**이라 합니다.
 
-![그림 3.10](/jpa-study-week2/3_10.png)
+![쓰기 지연, 커밋](/jpa-study-week2/3_10.png)
 
 <aside>
 💡 flush : 영속성 컨텍스트의 변경 내용을 데이터베이스에 동기화하는 작업
@@ -316,7 +316,7 @@ transaction.commit(); // 트랜잭션 커밋
     </aside>
 
 
-![그림 3.11](/jpa-study-week2/3_11.png)
+![변경 감지](/jpa-study-week2/3_11.png)
 
 ### **변경 감지의 순서**
 
@@ -396,19 +396,19 @@ JPQL은 SQL로 변환되어 **데이터베이스에서 엔티티를 조회합니
 
 - 1차 캐시부터 쓰기 지연 SQL 저장소까지 해당 엔티티를 관리하기 위한 모든 정보가 제거됩니다.
 
-![그림 3.12](/jpa-study-week2/3_12.png)
+![detach 실행 전](/jpa-study-week2/3_12.png)
 
-![그림 3.13](/jpa-study-week2/3_13.png)
+![detach 실행 후](/jpa-study-week2/3_13.png)
 
 ### 영속성 컨텍스트 초기화: clear()
 
 - `em.clear();`
 
-![그림 3.15](/jpa-study-week2/3_15.png)
+![영속성 컨텍스트 초기화 후](/jpa-study-week2/3_15.png)
 
 ### 영속성 컨텍스트 종료: close()
 
-![그림 3.17](/jpa-study-week2/3_17.png)
+![영속성 컨텍스트 제거 후](/jpa-study-week2/3_17.png)
 
 ### 준영속 상태의 특징
 
@@ -421,7 +421,7 @@ JPQL은 SQL로 변환되어 **데이터베이스에서 엔티티를 조회합니
 - 준영속 상태의 엔티티를 다시 영속 상태로 변경하는 방법
 - `merge()` 메소드는 준영속 상태의 엔티티를 받아서 그 정보로 **새로운 영속 상태의 엔티티를 반환합니다.**
 
-![그림 3.18](/jpa-study-week2/3_18.png)
+![준영속 병합 - 수정](/jpa-study-week2/3_18.png)
 
 1. merge() 를 실행합니다.
 2. 파라미터로 넘어온 준영속 엔티티의 식별자 값으로 1차 캐시에서 엔티티를 조회합니다. (1차 캐시에 없으면 데이터베이스에서 조회 후 1차 캐시에 저장)
