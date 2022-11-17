@@ -1,5 +1,5 @@
 ---
-title: [ML] California census data로 분석 과정 살펴보기(2)
+title: (ML) California census data로 분석 과정 살펴보기(2)
 description: CH) The fundamentals of Machine Learning
 slug: ai-ml-study-ch2(2)
 category: Data-Science
