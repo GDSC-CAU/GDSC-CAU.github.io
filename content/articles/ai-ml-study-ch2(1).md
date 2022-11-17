@@ -1,6 +1,6 @@
 ---
 title: [ML] California census data로 분석 과정 살펴보기(1)
-description: CH) The fundamentals of Machine Learning
+description: California census data로 분석 과정 살펴보기
 slug: ai-ml-study-ch2(1)
 category: Data-Science
 author: HyeWon Lee
@@ -232,6 +232,7 @@ housing["income_cat"].hist(bins=50, figsize=(10,5))
 plt.show()
 ```
 ![]()
+
 ```python
 from sklearn.model_selection import StratifiedShuffleSplit
  
