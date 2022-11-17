@@ -20,7 +20,6 @@ Google Cloud Skills Boost에서 과정을 학습하고 계신 분이나 GCP를 �
 
 <aside>
 🌀 대학생에게 무료로 사용할 수 있는 환경을 이용하고, 클라우드를 활용한 개발 환경에 익숙해지자.
-
 </aside>
 
 ## 1. 클라우드 컴퓨팅의 정의
@@ -39,34 +38,31 @@ Google Cloud Skills Boost에서 과정을 학습하고 계신 분이나 GCP를 �
 
 위에서 언급한 컴퓨팅 서비스 모델이 나오게 된 배경은 클라우드 컴퓨팅의 흐름과 연관이 있습니다. 클라우드 컴퓨팅의 발전에 따른 제 1, 2, 3 물결이 있습니다. 
 
-![cloud history](cloud-study-week1/1.png)
+![cloud history](/cloud-study-week1/1.png)
 
 *제 1물결*은 Colocation으로, Co-라는 ‘공동의’ 라는 의미와 location이 합쳐서 자원을 공동의 장소에 설치한다는 의미입니다. 공동의 장소에 설치된 서버를 사용한다면 데이터 센터에 투자할 비용을 줄일 수 있을 것입니다.
 
 <aside>
-☝ Colocation: 데이터 센터를 위한 물리적 공간에 투자할 필요가 없어짐 → 재정적 효율성 ⇪
-
+☝️ Colocation: 데이터 센터를 위한 물리적 공간에 투자할 필요가 없어짐 → 재정적 효율성 ⇪
 </aside>
 
 *제 2물결*은 가상 데이터 센터이며, 이때 2가지 유형의 제품, IaaS와 PaaS가 등장했습니다. 2물결까지는 사용자가 제어해야하는 환경이 존재했습니다. 
 
 <aside>
 ✌️ Virtualized data center: → IaaS, PaaS 등장
-
 </aside>
 
 이후 완전히 자동화된 *3세대 클라우드*인 컨테이너 기반 아키텍처로 발전합니다. GCP도 이를 제공하고 사용자가 사용하는 인프라를 자동으로 프로비저닝하고 구성합니다.
 
 <aside>
 👉 container-based architecture: 애플리케이션이 사용되는 인프라를 자동으로 프로비저닝하고 구성
-
 </aside>
 
 ## 4. GCP 서비스에 대한 소개
 
 클라우드 컴퓨팅 플랫폼인 GCP(Google Cloud Platform)에도 다양한 서비스들이 있습니다. 그 서비스들은 IaaS, PaaS, SaaS를 제공하는 다양한 모델들로 분류해볼 수 있습니다.  
 
-![gcp](cloud-study-week1/2.png)
+![gcp](/cloud-study-week1/2.png)
 
 GCP의 *IaaS*로는 VM(Virtual Machine)을 제공하는 **Compute Engine**, 데이터를 저장할 수 있는 **Cloud Storage & Database**가 있습니다.
 
@@ -83,7 +79,7 @@ GCP의 *IaaS*로는 VM(Virtual Machine)을 제공하는 **Compute Engine**, 데�
 
 그렇다면 GCP를 사용하면 실제로 이를 제공하는 물리적인 공간이 필요할텐데, 이런 데이터 센터는 어떻게 전세계적으로 분포되었을까요? 다음처럼 크게 다섯 지역에(location)안에 여러 Region이 있고, 다시 google cloud 리소스가 배포되는 지역인 Zone들이 있습니다.
 
-![location](cloud-study-week1/3.png)
+![location](/cloud-study-week1/3.png)
 
 이렇게 여러 개의 위치가 있는 이유는, 애플리케이션을 배치할 위치를 선택할 때 가용성(availability), 내구성(durability) 및 지연 시간(latency)과 같은 품질에 영향을 미치기 때문입니다. 
 
@@ -93,7 +89,7 @@ GCP의 *IaaS*로는 VM(Virtual Machine)을 제공하는 **Compute Engine**, 데�
 
 이 강의에서는 GCP에서 진행할 수 있는 5가지 실습이 있습니다. IaaS를 먼저 다루고, PaaS, Iaas와 PaaS를 조합해서 사용해볼 수 있는 순서로 구성되어 있었습니다.
 
-![lab1](cloud-study-week1/4.png)
+![lab1](/cloud-study-week1/4.png)
 
 **VM in a cloud**
 
@@ -107,30 +103,29 @@ Lab 2) VM에 웹 서버를 구성하고, CLoud SQL과 연결하여 Cloud Storage
 
  Cat🐱 이미지 파일을 Cloud Storage에 업로드한 후에는 테이블을 만들고 파일의 콘텐츠를 MySQL 데이터베이스로 가져오게 됩니다. 
 
-![lab2](cloud-study-week1/5.png)
+![lab2](/cloud-study-week1/5.png)
 
 **Cotainer in a cloud**
 
 Lab 3) Kubernate는 개념적으로 **IaaS를 제공하는 compute engine**과 **PaaS를 제공하는 app engine** 사이에 위치하며 둘의 이점을 이용합니다.
 
-•  GKE로 Kubernetes cluster를 프로비저닝합니다. 
+- GKE로 Kubernetes cluster를 프로비저닝합니다. 
 
-• `kubectl`을 사용하여 Docker containers를 배포하고 관리합니다.
+- `kubectl`을 사용하여 Docker containers를 배포하고 관리합니다.
 
 **Application in a cloud**
 
 Lab 4) 컨테이너 image를 빌드하고  Cloud Run에 배포합니다. Cloud Run을 이용하여 serverless하게 container를 실행합니다.
 
-마지막 LAB) 
+Lab 5) Terraform을 활용하여 **코드를 통해 인프라 서버를 자동으로 구성하는 방식을 배웁니다.**
 
-Terraform을 활용하여 **코드를 통해 인프라 서버를 자동으로 구성하는 방식을 배웁니다.**
-
+## 
 *위 내용은 **[Google Cloud Fundamentals: Core-Infrastructure-Locales](https://www.cloudskillsboost.google/course_templates/161)** 코스의 2가지 부분이 포함되어있습니다.
 
 - Introducing Google Cloud
 - Resources and Access in the Cloud
 
-![course](cloud-study-week1/6.png)
+![course](/cloud-study-week1/6.png)
 
 ### References
 
