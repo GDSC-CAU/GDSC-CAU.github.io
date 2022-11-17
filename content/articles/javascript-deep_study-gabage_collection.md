@@ -76,7 +76,7 @@ let user = {
 };
 ```
 
-![1](/static/javascript-deep_study-gabage_collection/1.png)
+![1](/javascript-deep_study-gabage_collection/1.png)
 
 - 왼쪽의 그림에서 화살표는 객체 참조를 나타냅니다.
 - 그림을 해석하면, 전역 변수 `user` 는 `{name:”John”}` 이라는 객체를 참조하고 있습니다.
@@ -88,7 +88,7 @@ let user = {
 user = null;
 ```
 
-![2](/static/javascript-deep_study-gabage_collection/2.png)
+![2](/javascript-deep_study-gabage_collection/2.png)
 
 - 왼쪽의 그림과 같이 이제 John은 도달할 수 없는 상태가 됩니다.
 - John에 접근할 방법도, John을 참조하는 것도 모두 사라집니다.
@@ -104,7 +104,7 @@ let user = {
 let admin = user;
 ```
 
-![3](/static/javascript-deep_study-gabage_collection/3.png)
+![3](/javascript-deep_study-gabage_collection/3.png)
 
 ```js
 user = null;
@@ -135,25 +135,25 @@ let family = marry(
 - 또한, 두 객체를 포함하는 새로운 객체를 반환합니다.
 - 메모리 구조는 아래의 그림과 같습니다.
 
-![4](/static/javascript-deep_study-gabage_collection/4.png)
+![4](/javascript-deep_study-gabage_collection/4.png)
 
 ```js
 delete family.father;
 delete family.mother.husband;
 ```
 
-![5](/static/javascript-deep_study-gabage_collection/5.png)
+![5](/javascript-deep_study-gabage_collection/5.png)
 
 - 참조 두 개를 지움으로써 John으로 들어오는 참조(화살표)가 모두 사라집니다.
 - 즉, John은 도달 가능한 상태에서 벗어납니다.
 
-![6](/static/javascript-deep_study-gabage_collection/6.png)
+![6](/javascript-deep_study-gabage_collection/6.png)
 
 - 외부로 나가는 참조는 도달 가능한 상태에 영향을 주지 않습니다.
 - 이제 John은 도달 가능한 상태가 아니기 때문에 메모리에서 제거되며, John에 저장된 데이터(프로퍼티) 역시 메모리에서 사라집니다.
 - 가비지 컬렉션 후 최종 메모리 구조는 아래와 같습니다.
     
-    ![7](/static/javascript-deep_study-gabage_collection/7.png)
+    ![7](/javascript-deep_study-gabage_collection/7.png)
     
 
 ⇒ 사실 Reference-counting 알고리즘에 따르면, 함수 내에서 두 객체가 서로를 참조하는 **순환 참조**는 객체가 여전히 서로를 참조하고 있기 때문에 가비지 컬렉팅되지 않습니다.(= **메모리 누수 발생!**) 하지만 이는 Mark-and-Sweep 알고리즘에 의해 보완됩니다. ( 이후 가비지컬렉션 알고리즘 파트에서 더 자세히 설명하겠습니다 :))
@@ -166,7 +166,7 @@ delete family.mother.husband;
 family = null;
 ```
 
-![8](/static/javascript-deep_study-gabage_collection/8.png)
+![8](/javascript-deep_study-gabage_collection/8.png)
 
 - John과 Ann은 여전히 서로를 참조하고 있지만, 근원 객체(root)가 참조하고 있지 않습니다.
 - 따라서 섬을 구성하는 객체 전부가 메모리에서 제거됩니다.
@@ -213,29 +213,29 @@ family = null;
         
          1) **roots**를 모두 회색으로 마킹하고, Deque에 push합니다.
         
-        ![9](/static/javascript-deep_study-gabage_collection/9.png)
+        ![9](/javascript-deep_study-gabage_collection/9.png)
         
         2) Deque에서 pop front하여 객체를 꺼내어 검은색으로 마킹합니다.
         
-        ![10](/static/javascript-deep_study-gabage_collection/10.png)
+        ![10](/javascript-deep_study-gabage_collection/10.png)
         
         3) 검은색으로 마킹된 객체가 참조하는 객체들을 회색으로 마킹하고, push front합니다.
         
-        ![11](/static/javascript-deep_study-gabage_collection/11.png)
+        ![11](/javascript-deep_study-gabage_collection/11.png)
         
         4) Deque가 완전히 빌때까지 b,c를 반복합니다.
         
-        ![12](/static/javascript-deep_study-gabage_collection/12.png)
+        ![12](/javascript-deep_study-gabage_collection/12.png)
         
-        ![13](/static/javascript-deep_study-gabage_collection/13.png)
+        ![13](/javascript-deep_study-gabage_collection/13.png)
         
         (중략)
         
-        ![14](/static/javascript-deep_study-gabage_collection/14.png)
+        ![14](/javascript-deep_study-gabage_collection/14.png)
         
         5) 최종적으로 검은색과 흰색으로 분류되고 Deque은 완전히 비게 됩니다. 끗!
         
-        ![15](/static/javascript-deep_study-gabage_collection/15.png)
+        ![15](/javascript-deep_study-gabage_collection/15.png)
         
     2. **`Sweep`**
         
@@ -245,7 +245,7 @@ family = null;
         
         메모리의 파편화가 심해지지 않도록 메모리를 재배치하여 메모리를 확보합니다.
         
-        ![16](/static/javascript-deep_study-gabage_collection/16.png)
+        ![16](/javascript-deep_study-gabage_collection/16.png)
         
 
 ## 최적화 기법
