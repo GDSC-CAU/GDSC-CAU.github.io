@@ -1,5 +1,5 @@
 ---
-title: [ML] Chap 2. Machine Learning Project(2)
+title: ML Chap 2. Machine Learning Project-2
 description: California census data로 머신러닝 프로젝트의 과정을 배워봅니다.
 slug: ai-ml-study-ch2-2
 category: Data-Science

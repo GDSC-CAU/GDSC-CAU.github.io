@@ -1,6 +1,6 @@
 ---
-title: [ML] Chap 4. Training Models
-description: 훈련시키는 방법을 배워봅니다.
+title: ML Chap 4. Training Models
+description: 모델을 훈련시키는 방법을 배워봅니다.
 slug: ai-ml-study-ch4
 category: Data-Science
 author: HyeWon Lee
