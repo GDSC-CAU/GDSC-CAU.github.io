@@ -1,12 +1,12 @@
 ---
-title: (ML) California census data로 분석 과정 살펴보기(2)
-description: CH) The fundamentals of Machine Learning
-slug: ai-ml-study-ch2(2)
+title: ML Chap 2. Machine Learning Project-2
+description: California census data로 머신러닝 프로젝트의 과정을 배워봅니다.
+slug: ai-ml-study-ch2-2
 category: Data-Science
 author: HyeWon Lee
 ---
 
-# California census data로 데이터 분석 과정 살펴보기(2)
+# Machine Learning Project(2)
 
 Hands-on-Machine-Learning Chap2
 
