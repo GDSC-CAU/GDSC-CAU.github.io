@@ -26,18 +26,31 @@ Google은 ```Flutter``` 의 기본 라이브러리로 직접 UI 위젯을 구성
 
 먼저, Android의 경우는 지난 2014년 출시한 Material UI를 가이드라인으로 제시하고 있습니다.
 
-<!-- Android 버전별 UI 변화 스크린샷 (Holo -> Mat V1 -> Mat V2 -> Mat V3 -->
+<div style="display: flex; flex-direction: row;">
+  <img width="30%" src="/flutter-project-2/android_holo.jpg">
+  <img width="30%" src="/flutter-project-2/android_material_v1.png">
+  <img width="30%" src="/flutter-project-2/android_material_v2.png">
+</div>
+
+<img width="95%" src="/flutter-project-2/android_material_v3.jpeg">
 
 이전의 Android 시스템에서 제공했던 칙칙하고 딱딱했던 Holo UI에서 벗어나,
-훨씬 깔끔하고 간결한 Material UI를 굉장히 좋아했던 기억이 나네요.
+훨씬 깔끔하고 간결한 Material UI가 처음 등장했을 때 굉장히 좋아했던 기억이 나네요.
 
 이 Material UI는 현재 V3 버전까지 여러번의 개선을 거쳐 점차 깔끔한 UI가 되어가고 있습니다.
+
+특히, Material UI V3는 배경화면의 색상에 맞추어 시스템의 전반적인 색상이 조화롭게 변화하는 Material-You 디자인이 새로이 적용되기도 했습니다.
 
 #### Apple iOS : Cupertino
 
 iOS와 iPadOS에서는 Cupertino라는 이름으로 디자인 가이드라인을 제시하고 있습니다.
 
-<!-- iOS 버전별 UI 변화 스크린샷 (6 -> 7 -> 10 -> 16) -->
+<div style="display: flex; flex-direction: row;">
+  <img width="25%" src="/flutter-project-2/apple_ios6.png">
+  <img width="25%" src="/flutter-project-2/apple_ios7.jpg">
+  <img width="25%" src="/flutter-project-2/apple_ios11.png">
+  <img width="25%" src="/flutter-project-2/apple_ios15.jpg">
+</div>
 
 지난 2013년의 iOS 7 업데이트 이후로 플랫한 느낌을 살리는 디자인이 채택되었는데,
 그것을 기반으로 현재의 iOS 16까지 깔끔한 UI를 잘 유지해오고 있습니다.
@@ -48,7 +61,11 @@ Microsoft의 Windows에서는 Fluent 라는 디자인 컨셉이 제시되고 있
 
 일상에서 늘 쓰는 Windows UI 이지만 Fluent 라는 이름으로 접하니 아무래도 낯선 분들이 많을 것 같은데요,
 
-<!-- Windows 버전별 UI 변화 스크린샷 (8 -> 10 -> 11) -->
+<img width="75%" src="/flutter-project-2/ms_windows8.jpg">
+
+<img width="75%" src="/flutter-project-2/ms_windows10.jpg">
+
+<img width="75%" src="/flutter-project-2/ms_windows11.png">
 
 Windows 8 에서 네모난 타일들로 이루어진 Metro UI를 처음 제시한 이후로,
 Windows 10 에서 Fluent 라는 이름으로 탈바꿈하더니,
