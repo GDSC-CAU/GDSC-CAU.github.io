@@ -63,8 +63,6 @@ Windows 10 에서 Fluent 라는 이름으로 탈바꿈하더니,
 
 ```React Native``` 의 경우는, 기존에 ```React.JS``` 를 이용해서 웹 프론트엔드 개발을 해보신 분들이라면 익숙할 수 있는 형식으로 코드를 작성하게 됩니다.
 
-<!-- RN 기본 UI 코드 -->
-
 하지만, 기본적으로는 별도의 디자인 라이브러리가 있는 것이 아닌,
 컴파일 후 애플리케이션의 동작 과정에서 OS 플랫폼의 기본 OEM 위젯을 호출하는 방식으로 UI가 구성되는데요,
 
@@ -72,7 +70,7 @@ Windows 10 에서 Fluent 라는 이름으로 탈바꿈하더니,
 
 별도의 외부 라이브러리를 사용하지 않고 기본 위젯만으로 간단한 UI를 구성해보았음에도, 플랫폼에 따른 UI 차이가 발생함을 확인할 수 있습니다.
 
-<!-- RN으로 구성한 UI 통일성 무너진 스크린샷 -->
+<img width="70%" src="/flutter-project-2/RN_1.png">
 
 하지만 ```Flutter``` 에서는 UI를 구성하고 렌더링할 때 별도의 OEM 위젯을 호출하는 것이 아니라,
 기본 라이브러리로 구현된 위젯을 호출하게 됩니다.
@@ -81,7 +79,15 @@ Windows 10 에서 Fluent 라는 이름으로 탈바꿈하더니,
 
 아래 스크린샷은 ```Flutter``` 의 기본 라이브러리만으로 Material과 Cupertino 각각의 UI를 구현해본 예시입니다.
 
-<!-- Flutter로 구성한 UI 스크린샷 -->
+<div style="display: flex; flex-direction: row;">
+  <img width="50%" src="/flutter-project-2/Flutter_Material_1.png">
+  <img width="50%" src="/flutter-project-2/Flutter_Material_2.png">
+</div>
+
+<div style="display: flex; flex-direction: row;">
+  <img width="50%" src="/flutter-project-2/Flutter_Cupertino_1.png">
+  <img width="50%" src="/flutter-project-2/Flutter_Cupertino_2.png">
+</div>
 
 하지만 이렇게 모든 UI 위젯을 애플리케이션 런타임 내에서 렌더링하게되면, 가장 먼저 들 수 있는 생각이 아마 성능이 부족한 경우가 생기지 않을까 라는 생각인데요,
 
@@ -90,7 +96,7 @@ Windows 10 에서 Fluent 라는 이름으로 탈바꿈하더니,
 <!-- UI 렌더링 로직 비교 이미지 -->
 
 ```React Native``` 와는 다르게 모든 UI 위젯을 직접 렌더링해 통일성 문제를 해결하면서 동시에
-```React Native````` 의 큰 단점이라고 꼽히는 렌더링 성능 문제까지 함께 해결한 것이죠.
+```React Native``` 의 큰 단점이라고 꼽히는 렌더링 성능 문제까지 함께 해결한 것이죠.
 
 ### 번외 : 하나의 코드로 Android와 iOS에서 서로 다른 UI 표현하기
 
@@ -124,6 +130,8 @@ class _PlatformExampleState extends State<PlatformExample> {
 ```
 
 다음 스크린샷은 바로 위의 코드를 이용해서 Android 혹은 iOS인지를 구분해 각각 그에 맞는 UI 위젯을 표시하도록 구현해본 것입니다.
+
+![Flutter UI with Conditional](/flutter-project-2/Flutter_Conditional.png)
 
 ### 마치며
 
