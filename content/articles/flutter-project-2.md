@@ -87,8 +87,48 @@ Windows 10 에서 Fluent 라는 이름으로 탈바꿈하더니,
 
 이를 위해서 Google이 자체적으로 개발한 Skia 그래픽 엔진을 이용하여, 성능상 문제를 해결하였습니다.
 
+<!-- UI 렌더링 로직 비교 이미지 -->
+
 ```React Native``` 와는 다르게 모든 UI 위젯을 직접 렌더링하면서
 ```React Native````` 의 큰 단점이라고 꼽히는 렌더링 성능 문제까지 함께 해결한 것이죠.
+
+### 번외 : 하나의 코드로 Android와 iOS에서 서로 다른 UI 표현하기
+
+```Flutter``` 에서 기본 UI 라이브러리로 Material과 Cupertino 모두의 레이아웃 디자인을 지원하긴 하지만,
+두 플랫폼을 모두 한 디자인으로 개발하게 된다면 OS 플랫폼의 디자인과 애플리케이션의 디자인 컨셉이 매칭되지 않는 결과물이 나오게 되겠죠,
+
+그래서 ```Flutter``` 에서는 기본적으로 각 플랫폼을 구분할 수 있는 함수를 제공하고 있습니다.
+
+다음 코드와 같이 ```Widget``` 을 구성할 때, ```dart:io``` 패키지에 기본적으로 포함되어 있는 ```Platform``` 클래스를 이용해
+각 플랫폼을 인식하고 그에 따른 UI 표현을 다르게 구성할 수 있습니다.
+
+```dart
+class PlatformExample extends StatefulWidget {
+  PlatformExample();
+  @override
+  _PlatformExampleState createState() => _PlatformExampleState();
+}
+
+class _PlatformExampleState extends State<PlatformExample> {
+  bool _value = false;
+  
+  @override
+  Widget build(BuildContext context) {
+    if (Platform.isIOS) {
+      return CupertinoSwitch(value: _value, onChanged: onChanged);
+    }
+    return Switch(value: _value, onChanged: onChanged);
+  }
+  
+  onChanged(bool value) {
+    setState(() {
+      _value = value;
+    });
+  }
+}
+```
+
+다음 스크린샷은 바로 위의 코드를 이용해서 Android 혹은 iOS인지를 구분해 각각 그에 맞는 UI 위젯을 표시하도록 구현해본 것입니다.
 
 ### 마치며
 
