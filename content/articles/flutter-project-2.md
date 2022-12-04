@@ -136,7 +136,9 @@ class _PlatformExampleState extends State<PlatformExample> {
 
 포스팅에서 소개했던 ```React Native``` 와 ```Flutter``` 앱의 예제 코드는 따로 제 깃허브에 업로드해두었으니, 필요하신 분들께서는 확인해보시면 좋을 것 같습니다.
 
-<!-- Github 링크 -->
+[Flutter 예제 코드](https://github.com/yymin1022/GDSC_Flutter_UI_Test)
+
+[ReactNative 예제 코드](https://github.com/yymin1022/GDSC_RN_UI_Test)
 
 ```dart
  print('Bye, World!');
