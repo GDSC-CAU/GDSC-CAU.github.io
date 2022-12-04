@@ -110,20 +110,15 @@ class PlatformExample extends StatefulWidget {
 }
 
 class _PlatformExampleState extends State<PlatformExample> {
-  bool _value = false;
-  
   @override
   Widget build(BuildContext context) {
-    if (Platform.isIOS) {
-      return CupertinoSwitch(value: _value, onChanged: onChanged);
+    if (Platform.isAndroid) {
+      // Material로 구현된 UI 함수가 반환되도록 지정
+      return MaterialPage();
     }
-    return Switch(value: _value, onChanged: onChanged);
-  }
-  
-  onChanged(bool value) {
-    setState(() {
-      _value = value;
-    });
+    
+    // Cupertino로 구현된 UI 함수가 반환되도록 지정
+    return CupertinoPage();
   }
 }
 ```
