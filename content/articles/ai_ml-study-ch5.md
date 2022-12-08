@@ -1,3 +1,10 @@
+---
+title: 서포트 벡터(SVM)으로 최적의 결정 경계를 찾아보기
+description: 서포트 벡터 머신(SVM)의 개념과 어떻게 작동하여 최적의 선형 결정 경계를 찾는지 알 수 있습니다.
+slug: ai_ml-study-ch5
+category: Data-Science
+author: YuJin Son
+---
 # CH5. Support Vector Machines
 
 ===================================================
@@ -12,7 +19,7 @@
 
 [https://kdeon.tistory.com/29](https://kdeon.tistory.com/29)
 
-# <span style='background-color: #ff5b1'>  00.SVM ( Suppor Vector Machine)</span>
+# <span style='background-color: #fff5b1'>  00.SVM ( Suppor Vector Machine)</span>
 
 - **매우 강력하고 변하기 쉬운 ML모델임**
 - ********************************************************************************************************************************************************선형(linear)이나 비선형(nonlinear) 분류(classification)/회귀(regression)/이상치 탐색(outlier detection)이 가능하다.********************************************************************************************************************************************************
@@ -22,7 +29,7 @@
 
 # **CHAPTER 5) Support Vector Machine**
 
-# <span style='background-color: #ff5b1'>  01. 선형 SVM 분류 </span>
+# <span style='background-color: #fff5b1'>  01. 선형 SVM 분류 </span>
 
 ![01](/ai_ml-study-ch5/01.png)
 
@@ -66,7 +73,7 @@
 
 → 오른쪽 그래프 : 특성의 스케일을 조정하면 결정 경계가 훨씬 좋아짐.
 
-# <span style='background-color: #ff5b1'>
+# <span style='background-color: #fff5b1'>
 02. 소프트 마진 분류(Soft Margin Classification) </span>
 
 ![03](/ai_ml-study-ch5/03.png)
@@ -140,7 +147,7 @@ array([1.])
 
 Using **LinearSVC class (with C=1) & hinge loss function** 
 
-# <span style='background-color: #ff5b1'>03. 비선형 SVM 분류(Nonlinear SVM Classification) </span>
+# <span style='background-color: #fff5b1'>03. 비선형 SVM 분류(Nonlinear SVM Classification) </span>
 
 - **비선형적인 데이터셋을 다루는 방법 : <span style='background-color: #F7DDBE'>다항특성(4장)과 같은 특성을 더 추가하는 것 </span>**
 
@@ -177,7 +184,7 @@ Using **LinearSVC class (with C=1) & hinge loss function**
 
 <다항 특성을 사용한 선형 SVM분류기>
 
-# <span style='background-color: #ff5b1'>04. 다항식 커널(Polynomial Kernel) </span>
+# <span style='background-color: #fff5b1'>04. 다항식 커널(Polynomial Kernel) </span>
 
 - 다항식 특성을 추가하는 것은 구현하기 쉽고 SVMs뿐만아니라 모든 머신러닝 알고리즘에서 잘 작동한다.
     
@@ -229,7 +236,7 @@ poly_kernel_svm_clf.fit(X, y)
 
 **⇒ 하이퍼파라미터 coef0는 모델이 높은 차수와 낮은 차수에 얼마나 영향을 받을지 조절함.**
 
-# <span style='background-color: #ff5b1'>05. 비슷한  특성 추가하기(Adding Similarity Features) </span>
+# <span style='background-color: #fff5b1'>05. 비슷한  특성 추가하기(Adding Similarity Features) </span>
 
 - **비선형 특성을 다루는 또 다른 기술** : **<span style='background-color: #F7DDBE'>각 샘플이 특정 landmark와 얼마나 닮았는지를 측정하는 유사도 함수(similarity function)로 계산한 특성을 추가하는 것 </span>**
 - 예)
@@ -269,7 +276,7 @@ poly_kernel_svm_clf.fit(X, y)
 👎 m개의 샘플과 n개의특성을 가지고 있는 훈련셋이 m개의 샘플과 m개의 특성을 가지는 훈련셋으로 변환된다.(원래의 것을 잃어버릴수도 있다.) / 훈련 세트가 매우 크면, 똑같이 많은 특성이 생긴다
 ```
 
-# <span style='background-color: #ff5b1'>06. 가우시안 RBF 커널 (GaussianRBF Kernel) </span>
+# <span style='background-color: #fff5b1'>06. 가우시안 RBF 커널 (GaussianRBF Kernel) </span>
 
 - **다항식 특성의 방법처럼, 유사도 특성방식**도 어떠한 머신러닝 알고리즘에 유용하지만, 모든 추가적인 특성을 모두 계산하려고 하면 **연산비용이  비싸진다**. 훈련셋이 클수록 더 그러하다.
 
@@ -309,7 +316,7 @@ poly_kernel_svm_clf.fit(X, y)
 
 : 여분의 시간과 컴퓨팅 성능이 있다면, 교차검증과 그리드탐색을 이용해 다른 커널들을 시도해볼 수도 있다.
 
-# <span style='background-color: #ff5b1'>07. 계산 복잡도(Computational Complexity) </span>
+# <span style='background-color: #fff5b1'>07. 계산 복잡도(Computational Complexity) </span>
 
 - **LinearSVS 클래스는 linear SVMs를 위해 최적화된 알고리즘을 구현하는 liblinear 라이브러리를 기반으로 한다.**
 
@@ -331,7 +338,7 @@ poly_kernel_svm_clf.fit(X, y)
 
 <SVM분류를 위한 Scikiti-Learn’s 클래스들의 비교>
 
-# <span style='background-color: #ff5b1'>07. SVM 회귀(SVM Regression) </span>
+# <span style='background-color: #fff5b1'>07. SVM 회귀(SVM Regression) </span>
 
 - **<span style='background-color: #F7DDBE'>SVM알고리즘은 다목적으로 쓰인다 </span>**.
 
@@ -384,7 +391,7 @@ svm_reg.fit(X, y)
 
 : **왼쪽 그림** : 규제가 덜하다.(C값이 크다) / **오른쪽 그림** : 규제가 많다.(C값이 작다.)
 
-# <span style='background-color: #ff5b1'> 08. Under the hood </span>
+# <span style='background-color: #fff5b1'> 08. Under the hood </span>
 
 - 이 챕터에서는 SVMs를 다룰 때 더 편하고 흔한 다른 관습을 사용할 것이다.
 
@@ -394,7 +401,7 @@ svm_reg.fit(X, y)
 
 : 입려 특성 벡터에 어떠한 편향 벡터도 추가되지 않는다.
 
-# <span style='background-color: #ff5b1'> 09. 결정함수와 예측 (Decision Function and Predictions) </span>
+# <span style='background-color: #fff5b1'> 09. 결정함수와 예측 (Decision Function and Predictions) </span>
 
 - **<span style='background-color: #F7DDBE'선형 SVM분류기 모델은 결정 함수 w^Tx + b = w1x1 +⋯ + wnxn + b를 계산하여 새로운 샘플 x를 예측한다.</span>**
 
@@ -416,7 +423,7 @@ svm_reg.fit(X, y)
 
 ⇒ **<span style='background-color: #F7DDBE'linear SVM분류기를 훈련하는 것 == </span>** 마진 오류을  발생기키지 않거나(하드 마진) 제한하면서(소프트 마진**)가능한 마진을 넓게 만드는 w과 b의 값을 찾는 것**
 
-# <span style='background-color: #ff5b1'>
+# <span style='background-color: #fff5b1'>
 10. 목적 함수(Training Objective) </span>
 
 - **<span style='background-color: #F7DDBE'결정함수의 기울기 == 가중치 벡터 ||w||의 norm</span>**
@@ -465,7 +472,7 @@ svm_reg.fit(X, y)
 ⇒ 여기에 하이퍼파라미터C가 두 목표 사이의 trade-off를 정의한다.**
 ```
 
-# <span style='background-color: #ff5b1'>11. 2차 계획법(QuadraticProgramming)</span>
+# <span style='background-color: #fff5b1'>11. 2차 계획법(QuadraticProgramming)</span>
 
 ## **<span style='background-color: #F7DDBE'><2차 계획법(Quadratic Programming)></span>**
 
@@ -498,7 +505,7 @@ svm_reg.fit(X, y)
 
 - 커널트릭을 사용하려면 제약이 있는 최적화문제를 다른 시각으로 봐야한다.
 
-# <span style='background-color: #ff5b1'>12. 이중 문제(The Dual Problem) </span>
+# <span style='background-color: #fff5b1'>12. 이중 문제(The Dual Problem) </span>
 
 - **근본적인 문제<span style='background-color: #F7DDBE'>)primial problem)</span>로 알려진 제약이 있는 최적화문제가 주어지면, <span style='background-color: #F7DDBE'>이중문제(dual problem)</span>이라고 불리는 문제와 가깝게 관련된 다른 문제로 표현이 가능하다.**
 - 이중문제의 해결책 : 일반적으로 근본적인 문제의 해결책에 대한 하한 값을 제공하지만, 어떤 조건 아래하에 근본적인 문제와 똑같은 해결책을 가질 수도 있다.
@@ -513,7 +520,7 @@ svm_reg.fit(X, y)
 - 이중 문제는 훈련 샘플들이 특성 수보다 작을 때 근본 문제보다 더 빨리 해결할 수 있다.
 - 더 중요하게, 근본문제에서는 안되는 커널 트릭을 해결할 수 있게 한다.
 
-# <span style='background-color: #ff5b1'> 13. 커널된 SVM (Kernelized SVM)</span>
+# <span style='background-color: #fff5b1'> 13. 커널된 SVM (Kernelized SVM)</span>
 
 - 2차원 훈련 셋에 2차 다항식 변환을 적용하고 싶어한다고 가정해보자 → 그 다음, 변형된 훈련 셋에 선형 SVM 분류기를 훈련시킨다.
 
@@ -546,7 +553,7 @@ svm_reg.fit(X, y)
 
 : 머신러닝에서 커널은 변환 ϕ을 계산하지 않아도 원래 벡터 a와 b에만 근거하여 점 곱 ϕ(a)^T ϕ(b)를 계산할 수 있는 함수다.
 
-# <span style='background-color: #ff5b1'>14. 온라인 SVMs(Online SVMs)</span>
+# <span style='background-color: #fff5b1'>14. 온라인 SVMs(Online SVMs)</span>
 
 - 선형 SVM 분류기에서, 아래의 비용함수를 최소화하는 한가지 방법은 근본 문제에서 유도된 경사하강법을 사용하는 것이다.
 
